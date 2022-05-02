@@ -25,9 +25,10 @@ export default {
   },
 
   fonts: {
-    primary_400: 'Inter_400Regular',
-    primary_500: 'Inter_500Medium',
-
+    regular: 'Roboto_400Regular',
+    medium: 'Roboto_500Medium',
+    bold: 'Roboto_700Bold',
+    black: 'Roboto_900Black',
     
   }
 }
