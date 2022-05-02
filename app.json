@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "app-beleza-mobile-emf",
+    "slug": "app-beleza-mobile-emf",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
