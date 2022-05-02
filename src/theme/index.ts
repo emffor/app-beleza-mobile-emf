@@ -1,7 +1,7 @@
 export default {
   colors: {
       primary: '#EDEDED',
-      primary_100: '#FAFAFA',
+      primary_100: '#F8F9FA',
 
       text: '#B3B9C2',
       text_100: '#B9B9B9',
@@ -16,7 +16,7 @@ export default {
       blue_marine: '#0F5BFF',
       blue_sky: '#95B8C4',
 
-      border: '#F3F0F0',
+      border: '#DDE5F0',
 
       line: '#EBEBF0',
 

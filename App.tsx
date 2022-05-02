@@ -12,7 +12,9 @@ import {
   Roboto_700Bold,
   Roboto_900Black,
 } from '@expo-google-fonts/roboto';
-import { SignIn } from './src/screens/SignIn';
+
+import { Splash } from './src/screens/Splash';
+import { RegistrationData } from './src/screens/RegistrationData';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -28,7 +30,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-        <SignIn />
+        <RegistrationData />
     </ThemeProvider>
   );
 }

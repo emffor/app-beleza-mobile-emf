@@ -51,7 +51,7 @@ export const Footer = styled.View`
     margin: 34px 0;
 `;
 
-  export const Register = styled.TouchableOpacity`
+  export const ButtonRegister = styled.TouchableOpacity`
     margin-top: 34px;
   `;
 

@@ -11,13 +11,14 @@ import {
   Title,
   SubTitle,
   Footer,
-  Register,
   TitleRegister,
   Form,
   FieldTitle,
+  ButtonRegister,
+
 } from './styles';
 
-export function SignIn(){
+export function Splash(){
   return (
     <Container>
       <HeaderContent>
@@ -49,11 +50,16 @@ export function SignIn(){
           
 
             <Footer>
-              <Button title="Entrar" />
+              <Button 
+                title="Entrar"
+                onPress={() => {}}
+              />
 
-              <Register>
+              <ButtonRegister
+                onPress={() => {}}
+              >
                 <TitleRegister>Fazer Cadastro</TitleRegister>
-              </Register>
+              </ButtonRegister>
             </Footer>
       </Form>
 
