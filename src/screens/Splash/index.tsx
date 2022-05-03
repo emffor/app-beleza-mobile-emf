@@ -5,6 +5,8 @@ import LogoBelezaSvg from '../../assets/logobelleza.svg';
 import LogoShopSvg from '../../assets/logoshop.svg';
 import { Button } from '../../components/Form/Button';
 
+import { ParamListBase, NavigationProp, useNavigation } from '@react-navigation/native';
+
 import {
   Container,
   HeaderContent,
@@ -19,6 +21,17 @@ import {
 } from './styles';
 
 export function Splash(){
+  const navigation = useNavigation();
+
+  const handleNextPage = () => {
+    navigation.navigate('SignIn');
+  }
+
+  const handleGoBAck = () => {
+    navigation.goBack();
+    
+  }
+
   return (
     <Container>
       <HeaderContent>
@@ -32,7 +45,6 @@ export function Splash(){
           width={RFValue(450)}
           height={RFValue(243)}
           viewBox="120 35 480 430"
-          
         />
        
       </HeaderContent>
@@ -43,7 +55,7 @@ export function Splash(){
             <Title>Inspiração que aproximá</Title>
 
             <SubTitle>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales est enim, id{'\n'}luctus dui dignissim nec
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales est enim, id{'\n'}luctus dui dignissim nec
             </SubTitle>
             
         </FieldTitle>
@@ -52,7 +64,7 @@ export function Splash(){
             <Footer>
               <Button 
                 title="Entrar"
-                onPress={() => {}}
+                onPress={handleNextPage}
               />
 
               <ButtonRegister

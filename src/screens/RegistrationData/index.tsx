@@ -56,6 +56,7 @@ export function RegistrationData(){
                 <Input 
                     placeholder="Nome Completo"
                     onChangeText={setName}
+  
                 />
                 
                 <Input 

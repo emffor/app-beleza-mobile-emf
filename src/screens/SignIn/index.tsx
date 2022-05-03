@@ -5,6 +5,7 @@ import { ButtonBack } from '../../components/Form/ButtonBack';
 import { Input } from '../../components/Form/input';
 
 import auth from '@react-native-firebase/auth';
+import { useNavigation } from '@react-navigation/native';
 
 import {
   Container,
@@ -20,9 +21,11 @@ import {
 } from './styles';
 import { Alert } from 'react-native';
 
+
 export function SignIn(){
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigation = useNavigation();
 
    function handleSignInWithEmailAndPassword(){
     auth()
@@ -42,15 +45,22 @@ export function SignIn(){
       .then(() => Alert.alert('Enviamos um link para seu E-mail para você redefinir sua senha!'))
     }
 
+  
+    const handleGoBAck = () => {
+      navigation.goBack();
+    }
+
 
   return (
     <Container>
          <Form>
               <ButtonBack 
                   title="Entrar"
+                  onPress={handleGoBAck}
               /> 
 
            <Fields>
+
                 
                 <Input 
                     placeholder="Email"

@@ -16,10 +16,20 @@
 
 - yarn add styled-components
 - yarn add @types/styled-components-react-native -D
+
+- yarn add react-native-iphone-x-helper
+
 - yarn add @react-navigation/native
 - yarn add react-native-screens react-native-safe-area-context
 - yarn add @react-navigation/bottom-tabs
-- yarn add react-native-iphone-x-helper
+
+To use this navigator, ensure that you have @react-navigation/native and its dependencies (follow this guide), then install @react-navigation/stack:
+
+
+**para index => import 'react-native-gesture-handler';**
+- yarn add @react-navigation/stack
+*with expo*
+- expo install react-native-gesture-handler
 
 - expo install expo-font @expo-google-fonts/roboto
 - expo install expo-app-loading

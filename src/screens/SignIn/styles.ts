@@ -60,3 +60,5 @@ export const TitleRegisterButton = styled.Text`
     font-family: ${({ theme }) => theme.fonts.regular};
     color: ${({ theme }) => theme.colors.blue_marine};
 `;
+
+ 
