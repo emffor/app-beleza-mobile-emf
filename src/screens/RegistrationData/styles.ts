@@ -50,6 +50,7 @@ export const Footer = styled.View`
     width: 100%;
     height: ${RFValue(118)}px;
 
+    padding: 0 39px;
     margin-top: 60px;
     justify-content: center;
 
@@ -58,5 +59,4 @@ export const Footer = styled.View`
     
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    
 `;
