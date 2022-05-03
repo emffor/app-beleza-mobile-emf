@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar } from '../../components/Calendar';
+import { Button } from '../../components/Form/Button';
 import { ButtonBack } from '../../components/Form/ButtonBack';
 
 import {
@@ -11,6 +11,20 @@ import {
   DateInfo,
   DateTitle,
   DateValue,
+  DatePast,
+  DateFuture,
+  FieldMessage,
+  Message,
+  Description,
+  PeriodDay,
+  NameDay,
+  SchedulingTime,
+  TimeMorning,
+  HourValue,
+  TimeAfternoon,
+  TimeEvening,
+  Time,
+  Footer
 } from './styles';
 
 export function ScheduleService(){
@@ -29,18 +43,71 @@ export function ScheduleService(){
         
 
         <ServicePeriod>
-          <DateInfo>
-            <DateValue selected={false}>18</DateValue>
-            <DateTitle selected={false}>Terça</DateTitle>
-          </DateInfo>
+          <DatePast>22    23    24</DatePast>
+
+              <DateInfo>
+                <DateValue>25</DateValue>
+                <DateTitle>Terça</DateTitle>
+              </DateInfo>
+
+            <DateFuture>26    27    28</DateFuture>
+          
         </ServicePeriod>
 
-        <Calendar />
+        <FieldMessage>
+          <Message>
+              Este serviço dura em média XX horas e a atendente irá escolher algum dos horários que você selecionar
+            </Message>
+        </FieldMessage>
 
+        <Description>
+            Quais horários você está disponível para receber a profissional?
+        </Description>
 
 
         </Header>
+
+        <PeriodDay>
+          <NameDay>Manhã</NameDay>
+          <NameDay>Tarde</NameDay>
+          <NameDay>Noite</NameDay>
+        </PeriodDay>
+
+        <SchedulingTime>
+          <TimeMorning>
+            <HourValue><Time>12:00</Time></HourValue>
+            <HourValue><Time>12:00</Time></HourValue>
+            <HourValue><Time>12:00</Time></HourValue>
+            <HourValue><Time>12:00</Time></HourValue>
+            <HourValue><Time>12:00</Time></HourValue>
+          </TimeMorning>
+
+          <TimeAfternoon>
+            <HourValue><Time>12:00</Time></HourValue>
+            <HourValue><Time>12:00</Time></HourValue>
+            <HourValue><Time>12:00</Time></HourValue>
+            <HourValue><Time>12:00</Time></HourValue>
+            <HourValue><Time>12:00</Time></HourValue>
+          </TimeAfternoon>
+
+          <TimeEvening>
+            <HourValue><Time>12:00</Time></HourValue>
+            <HourValue><Time>12:00</Time></HourValue>
+            <HourValue><Time>12:00</Time></HourValue>
+            <HourValue><Time>12:00</Time></HourValue>
+            <HourValue><Time>12:00</Time></HourValue>
+          </TimeEvening>
+
+        </SchedulingTime>
+        
       </Content>
+
+        <Footer>
+          <Button 
+                title="Cadastrar"
+                onPress={() => {}}
+            />
+        </Footer>   
     </Container>
   );
 }

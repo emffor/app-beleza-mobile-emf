@@ -1,19 +1,16 @@
 import { RFValue } from 'react-native-responsive-fontsize';
-import styled, {css} from 'styled-components/native';
+import styled from 'styled-components/native';
 
-interface DateValueProps {
-    selected: boolean;
-}
 
 export const Container = styled.View`
     flex: 1;
     
 `;
 
-export const Content = styled.View`
-    padding-top: 30px;
-    padding-left: 20px;
-    padding-left: 20px;
+export const Content = styled.ScrollView`
+    flex: 1;
+    margin: 20px 20px 10px 20px;
+    
 `;
 
 export const Header = styled.View`
@@ -25,9 +22,16 @@ export const ServiceTitle = styled.Text`
     font-family: ${({ theme }) => theme.fonts.regular};
     font-size: ${RFValue(14)}px;
     color: ${({ theme }) => theme.colors.text_700};
+    margin-top: -20px;
 `;
 
-export const ServicePeriod = styled.View``;
+export const ServicePeriod = styled.View`
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 30px;
+`;
 
 export const DateInfo = styled.View`
     width: 104px;
@@ -37,20 +41,22 @@ export const DateInfo = styled.View`
     background-color: ${({ theme }) => theme.colors.blue_sky};
 
     border-radius: 10px;
-    margin-top: 30px;
 
     align-items: center;
     justify-content: space-between;
+
+    margin-right: 10px;
+    margin-left: 10px;
 `;
 
-export const DateValue = styled.Text<DateValueProps>`
+export const DateValue = styled.Text`
     font-family: ${({ theme }) => theme.fonts.bold};
     font-size: ${RFValue(15)}px;
     color: ${({ theme }) => theme.colors.shape};
     padding-left: 15px;
 `;
 
-export const DateTitle = styled.Text<DateValueProps>`
+export const DateTitle = styled.Text`
     font-family: ${({ theme }) => theme.fonts.regular};
     font-size: ${RFValue(15)}px;
     color: ${({ theme }) => theme.colors.shape};
@@ -58,5 +64,96 @@ export const DateTitle = styled.Text<DateValueProps>`
 
 `;
 
+export const DatePast = styled.Text`
+    font-family: ${({ theme }) => theme.fonts.regular};
+    font-size: ${RFValue(15)}px;
+    color: ${({ theme }) => theme.colors.text};
+`;
+
+export const DateFuture = styled.Text`
+    font-family: ${({ theme }) => theme.fonts.regular};
+    font-size: ${RFValue(15)}px;
+    color: ${({ theme }) => theme.colors.text};
+`;
+
+export const FieldMessage = styled.View`
+    width: 100%;
+    height: ${RFValue(54)}px;
+    background-color: ${({ theme }) => theme.colors.primary};
+    border-radius: 10px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+`;
+
+export const Message = styled.Text`
+    font-family: ${({ theme }) => theme.fonts.regular};
+    font-size: ${RFValue(12)}px;
+    color: ${({ theme }) => theme.colors.text_300};
+`;
+
+export const Description = styled.Text`
+    margin: 30px 0;
+    font-family: ${({ theme }) => theme.fonts.regular};
+    font-size: ${RFValue(14)}px;
+    color: ${({ theme }) => theme.colors.text_700};
+`;
+
+export const PeriodDay = styled.View`
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-bottom: 15px;
+`;
+
+export const NameDay = styled.Text`
+    font-size: ${RFValue(16)}px;
+    font-family: ${({ theme }) => theme.fonts.regular};
+    color: ${({ theme }) => theme.colors.text_700};
+`;
+
+export const SchedulingTime = styled.View`
+    flex-direction: row;
+    justify-content: space-between;
+`;
+
+export const HourValue = styled.TouchableOpacity`
+    width: ${RFValue(83)}px;
+    height: ${RFValue(40)}px;
+    background-color: ${({ theme }) => theme.colors.blue_sky};
+    
+    border-radius: 14px;
+    margin-bottom: 12px;
+
+    align-items: center;
+    justify-content: center;
+`;
+
+export const Time = styled.Text`
+    font-size: ${RFValue(16)}px;
+    font-family: ${({ theme }) => theme.fonts.bold};
+    color: ${({ theme }) => theme.colors.shape};
+`;
+
+export const TimeMorning = styled.View``;
+
+export const TimeAfternoon = styled.View``;
+
+export const TimeEvening = styled.View``;
+
+export const Footer = styled.View`
+    width: 100%;
+    height: ${RFValue(118)}px;
+
+    padding: 0 39px;
+    
+    justify-content: center;
+
+    background: ${({ theme }) => theme.colors.shape};
+
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+`;
 
 
