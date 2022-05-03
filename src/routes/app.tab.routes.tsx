@@ -4,7 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialIcons } from '@expo/vector-icons';
 import theme from '../theme';
 import { Home } from '../screens/Home';
-import { Schedule } from '../screens/Schedule';
+import { ScheduleService } from '../screens/ScheduleService';
 const { Navigator, Screen } = createBottomTabNavigator();
 
 export function AppTabRoutes() {
@@ -40,8 +40,8 @@ export function AppTabRoutes() {
       />
 
     <Screen
-        name="Schedule"
-        component={Schedule}
+        name="ScheduleService"
+        component={ScheduleService}
         options={{
           tabBarIcon: ({ size, color }) => (
             <MaterialIcons

@@ -59,7 +59,7 @@ export const Address = styled.Text`
 export const Icon = styled(Entypo)`
     font-size: ${RFValue(20)}px;
     color: ${({ theme }) => theme.colors.shape};
-
+    
 `;
 
 
@@ -77,6 +77,7 @@ export const HighlightCards = styled.ScrollView.attrs({
 
 export const FieldCategory = styled.View`
     margin: 0 20px;
+    
 `;
 
 
@@ -84,5 +85,15 @@ export const TitleCategory = styled.Text`
     font-family: ${({ theme }) => theme.fonts.regular};
     font-size: ${RFValue(18)}px;
     color: ${({ theme }) => theme.colors.text_700};
-    padding: 0 34px;
+    padding: 0 15px;
 `;
+
+export const TopDetails = styled.View`
+    flex-direction: row;
+`;
+
+export const TitleHeader = styled.View`
+    flex: 1;
+    padding-right: 20px;
+`;
+

@@ -6,6 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { AppTabRoutes } from './app.tab.routes';
 import { AuthRoutes } from './auth.routes';
 import { Home } from '../screens/Home';
+import { ScheduleService } from '../screens/ScheduleService';
 
 type User = {
   uid: string;
@@ -25,7 +26,7 @@ export function Routes() {
   return (
     <NavigationContainer>
       {/* {(user ? <AppTabRoutes /> : <AuthRoutes />)}  */} 
-      <Home />
+      <ScheduleService />
     </NavigationContainer>
   )
 }

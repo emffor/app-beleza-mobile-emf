@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { Schedule } from '../screens/Schedule';
+import { ScheduleService } from '../screens/ScheduleService';
 import { Home } from '../screens/Home';
 
 const { Navigator, Screen } = createStackNavigator();
@@ -15,7 +15,7 @@ export function AppStackRoutes() {
             }}
         >
             <Screen name="Home" component={Home} />
-            <Screen name="Schedule" component={Schedule} />  
+            <Screen name="ScheduleService" component={ScheduleService} />  
         </Navigator>
     );
 }

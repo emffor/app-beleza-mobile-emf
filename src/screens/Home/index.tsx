@@ -14,7 +14,9 @@ import {
   Icon,
   HighlightCards,
   TitleCategory,
-  FieldCategory
+  FieldCategory,
+  TopDetails,
+  TitleHeader
 } from './styles';
 
 
@@ -56,9 +58,6 @@ export function Home(){
     },
   ]
 
-
-  
-
   function handleLogout(){
     auth().signOut();
   }
@@ -73,11 +72,25 @@ export function Home(){
     <Container>
         <Header>
           <HeaderContent>
-            <Title>Olá, José</Title>
-            <Subtitle>Onde será seu atendimento hoje?</Subtitle>
+            <TopDetails>
+              <TitleHeader>
+                  <Title>Olá, José</Title>
 
+                  <Subtitle>
+                    Onde será seu atendimento hoje?
+                  </Subtitle>
 
-            <Localization>
+                </TitleHeader>
+
+                  <ButtonLogout 
+                    onPress={handleLogout}
+                    icon="logout"
+                  />
+            </TopDetails>
+            
+            <Localization 
+              onPress={() => {}}
+            >
                 <Address>Avenida Miguel Castro, 600</Address>
                 <Icon 
                   name="chevron-right"

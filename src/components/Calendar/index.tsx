@@ -1,14 +1,13 @@
 import React from 'react';
 
 import {
-  Container,
-  Title
+  Container
 } from './styles';
 
-export function Schedule(){
+export function Calendar(){
   return (
     <Container>
-        <Title>Schedule</Title>
+
     </Container>
   );
 }
