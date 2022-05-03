@@ -1,24 +1,28 @@
 import React from 'react';
+import { Button } from '../../components/Form/Button';
+
 import { ButtonBack } from '../../components/Form/ButtonBack';
 import { Input } from '../../components/Form/input';
 
 import {
   Container,
-  Header,
+  Form,
   Fields,
   Footer,
+  FieldCheck,
+  Checkbox,
+  Title
 } from './styles';
 
 export function RegistrationData(){
   return (
     <Container>
-           <Header>
+         <Form>
                 <ButtonBack 
                     title="Fazer cadastro"
-                />      
-            </Header>
+                /> 
 
-            <Fields>
+           <Fields>
                 <Input 
                     placeholder="Nome Completo"
 
@@ -33,11 +37,25 @@ export function RegistrationData(){
                     secureTextEntry={true}
                 />
                 
-            </Fields>
 
-            <Footer>
-                
-            </Footer>  
+                <FieldCheck>
+                  <Checkbox>
+
+                  </Checkbox>
+                  
+                  <Title>
+                    Aceito os termos e condições
+                  </Title>
+                </FieldCheck>
+            </Fields>
+        </Form>    
+
+        <Footer>
+          <Button 
+                title="Cadastrar"
+                onPress={() => {}}
+            />
+        </Footer>     
     </Container>
   );
 }

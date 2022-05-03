@@ -58,3 +58,6 @@
 
 yarn add @react-native-firebase/auth
 
+
+
+1 - checkbox na pagina RegistrationData
