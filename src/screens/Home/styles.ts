@@ -1,9 +1,11 @@
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
 import { Entypo } from '@expo/vector-icons';
-import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
-export const Container = styled.View`
+export const Container = styled.ScrollView.attrs({
+    showsHorizontalScrollIndicator: false,
+    contentContainerStyle: {paddingBottom: 30},
+})`
     flex: 1;
     background: ${({ theme }) => theme.colors.primary_100};
 `;
@@ -14,6 +16,7 @@ export const Header = styled.View`
 
     background-color: ${({ theme }) => theme.colors.blue_sky};
     padding: 50px 24px;
+    margin-bottom: 120px;
 `;
 
 export const HeaderContent = styled.View`
@@ -70,4 +73,16 @@ export const HighlightCards = styled.ScrollView.attrs({
     position: absolute;
     
     margin-top: ${RFPercentage(35)}px;
+`;
+
+export const FieldCategory = styled.View`
+    margin: 0 20px;
+`;
+
+
+export const TitleCategory = styled.Text`
+    font-family: ${({ theme }) => theme.fonts.regular};
+    font-size: ${RFValue(18)}px;
+    color: ${({ theme }) => theme.colors.text_700};
+    padding: 0 34px;
 `;
