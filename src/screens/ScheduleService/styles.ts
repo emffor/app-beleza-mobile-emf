@@ -1,5 +1,7 @@
 import { RFValue } from 'react-native-responsive-fontsize';
-import styled from 'styled-components/native';
+import styled, { css } from 'styled-components/native';
+
+
 
 
 export const Container = styled.View`
@@ -118,23 +120,11 @@ export const SchedulingTime = styled.View`
     justify-content: space-between;
 `;
 
-export const HourValue = styled.TouchableOpacity`
-    width: ${RFValue(83)}px;
-    height: ${RFValue(40)}px;
-    background-color: ${({ theme }) => theme.colors.blue_sky};
+
+
     
-    border-radius: 14px;
-    margin-bottom: 12px;
 
-    align-items: center;
-    justify-content: center;
-`;
 
-export const Time = styled.Text`
-    font-size: ${RFValue(16)}px;
-    font-family: ${({ theme }) => theme.fonts.bold};
-    color: ${({ theme }) => theme.colors.shape};
-`;
 
 export const TimeMorning = styled.View``;
 

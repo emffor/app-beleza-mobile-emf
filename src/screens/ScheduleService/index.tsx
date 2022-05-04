@@ -1,6 +1,12 @@
 import React from 'react';
+import { FlatList } from 'react-native';
 import { Button } from '../../components/Form/Button';
 import { ButtonBack } from '../../components/Form/ButtonBack';
+import { ButtonTime } from '../../components/Form/ButtonTime';
+
+import { timesMorning } from '../../utils/times';
+import { timesAfternoon } from '../../utils/times';
+import { timesEvening } from '../../utils/times';
 
 import {
   Container,
@@ -20,10 +26,8 @@ import {
   NameDay,
   SchedulingTime,
   TimeMorning,
-  HourValue,
   TimeAfternoon,
   TimeEvening,
-  Time,
   Footer
 } from './styles';
 
@@ -75,29 +79,29 @@ export function ScheduleService(){
 
         <SchedulingTime>
           <TimeMorning>
-            <HourValue><Time>12:00</Time></HourValue>
-            <HourValue><Time>12:00</Time></HourValue>
-            <HourValue><Time>12:00</Time></HourValue>
-            <HourValue><Time>12:00</Time></HourValue>
-            <HourValue><Time>12:00</Time></HourValue>
+              <ButtonTime time='08:00' status='waiting'/>
+              <ButtonTime time='09:00' status='waiting'/>
+              <ButtonTime time='10:00' status='disabled'/>
+              <ButtonTime time='11:00' status='disabled'/>
+              <ButtonTime time='12:00' status='waiting'/>
           </TimeMorning>
 
           <TimeAfternoon>
-            <HourValue><Time>12:00</Time></HourValue>
-            <HourValue><Time>12:00</Time></HourValue>
-            <HourValue><Time>12:00</Time></HourValue>
-            <HourValue><Time>12:00</Time></HourValue>
-            <HourValue><Time>12:00</Time></HourValue>
+              <ButtonTime time='13:00' status='waiting'/>
+              <ButtonTime time='14:00' status='active'/>
+              <ButtonTime time='15:00' status='disabled'/>
+              <ButtonTime time='16:00' status='waiting'/>
+              <ButtonTime time='17:00' status='waiting'/>
           </TimeAfternoon>
-
+              
           <TimeEvening>
-            <HourValue><Time>12:00</Time></HourValue>
-            <HourValue><Time>12:00</Time></HourValue>
-            <HourValue><Time>12:00</Time></HourValue>
-            <HourValue><Time>12:00</Time></HourValue>
-            <HourValue><Time>12:00</Time></HourValue>
+              <ButtonTime time='18:00' status='waiting'/>
+              <ButtonTime time='19:00' status='waiting'/>
+              <ButtonTime time='20:00' status='waiting'/>
+              <ButtonTime time='21:00' status='disabled'/>
+              <ButtonTime time='22:00' status='disabled'/>
           </TimeEvening>
-
+                
         </SchedulingTime>
         
       </Content>
