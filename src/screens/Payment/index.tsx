@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, FlatList } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 import { Card } from '../../components/Card';
 import { Button } from '../../components/Form/Button';
 import { cards } from '../../utils/cards';
@@ -129,25 +130,28 @@ export function Payment(){
 
                 <PortionSelectedModal 
                     closeSelectModal={handleCloseSelectModal}
+                    portion='1x'
+                    setPortion={() => {}}
                 />
+
               </ModalField>
 
             </Modal>
 
             <FieldCards>
                 <Cards>             
-                   <FlatList 
-                       data={cards}
-                       keyExtractor={(item) => String(item.id)}
-                       renderItem={({ item }) => (
-                        <Card 
+                    <ScrollView>
+                      {
+                        cards.map(item => (
+                          <Card 
                             isActive={selectedCard}
                             selectCard={handleSelectCard}
-                            nameCard = {item.name}
-                            numberCard = {item.number}
-                        />
-                       )}      
-                    />
+                            nameCard={item.name}
+                            numberCard={item.number}
+                          />
+                        ))
+                      }
+                    </ScrollView>     
                 </Cards>
      
             </FieldCards>   

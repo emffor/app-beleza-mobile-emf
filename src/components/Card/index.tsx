@@ -12,11 +12,15 @@ import {
   IconSelected,
 } from './styles';
 
+interface KeyProps {
+    
+}
 interface Props {
     isActive: boolean;
     selectCard: () => void;
     nameCard: string;
-    numberCard: string; 
+    numberCard: string;
+    id?: string;
 }
 
 export function Card({

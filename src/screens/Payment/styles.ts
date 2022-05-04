@@ -4,7 +4,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Octicons } from '@expo/vector-icons';
 
 
-export const Container = styled.ScrollView`
+export const Container = styled.View`
     background-color: ${({ theme }) => theme.colors.shape};
     flex: 1;
 `;
@@ -15,9 +15,7 @@ export const Gradient = styled(LinearGradient).attrs({
     
 `;
 
-export const Content = styled.View`
-    
-`;
+export const Content = styled.ScrollView``;
 
 export const FieldButtonBack = styled.View`
     width: 100%;
