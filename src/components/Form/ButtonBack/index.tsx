@@ -13,8 +13,8 @@ export function ButtonBack({ title, ...rest }: Props) {
   return (
     <Container activeOpacity={0.8} {...rest}>
       <ChevronBackSvg 
-        width={18}
-        height={18}
+        width={17}
+        height={17}
         style={{ paddingRight: 46 }}
       />
 

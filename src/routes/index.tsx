@@ -5,10 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import { AppTabRoutes } from './app.tab.routes';
 import { AuthRoutes } from './auth.routes';
-import { Home } from '../screens/Home';
-import { ScheduleService } from '../screens/ScheduleService';
-import { ConfirmSelectedModal } from '../screens/ConfirmSelectedModal';
-import { Payment } from '../screens/Payment';
+import { AddCard } from '../screens/AddCard';
 
 
 type User = {
@@ -29,7 +26,7 @@ export function Routes() {
   return (
     <NavigationContainer>
       {/* {(user ? <AppTabRoutes /> : <AuthRoutes />)}  */} 
-      <Payment />
+      <AddCard/>
     </NavigationContainer>
   )
 }
