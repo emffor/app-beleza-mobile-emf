@@ -120,12 +120,6 @@ export const SchedulingTime = styled.View`
     justify-content: space-between;
 `;
 
-
-
-    
-
-
-
 export const TimeMorning = styled.View``;
 
 export const TimeAfternoon = styled.View``;
@@ -146,4 +140,12 @@ export const Footer = styled.View`
     border-top-right-radius: 30px;
 `;
 
+export const ModalField = styled.View`
+    width: 100%;
+    height: 100%;
+
+    justify-content: flex-end;
+
+    background-color: rgba(0, 0, 0, 0.5);
+`;
 

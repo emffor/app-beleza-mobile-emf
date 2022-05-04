@@ -1,5 +1,5 @@
-import React from 'react';
-import { FlatList } from 'react-native';
+import React, { useState } from 'react';
+import { Modal } from 'react-native';
 import { Button } from '../../components/Form/Button';
 import { ButtonBack } from '../../components/Form/ButtonBack';
 import { ButtonTime } from '../../components/Form/ButtonTime';
@@ -7,6 +7,7 @@ import { ButtonTime } from '../../components/Form/ButtonTime';
 import { timesMorning } from '../../utils/times';
 import { timesAfternoon } from '../../utils/times';
 import { timesEvening } from '../../utils/times';
+import { ConfirmSelectedModal } from '../ConfirmSelectedModal';
 
 import {
   Container,
@@ -28,10 +29,21 @@ import {
   TimeMorning,
   TimeAfternoon,
   TimeEvening,
-  Footer
+  Footer,
+  ModalField
 } from './styles';
 
 export function ScheduleService(){
+  const [modalVisible, setModalVisible] = useState(false);
+
+  function handleCloseSelectModal() {
+    setModalVisible(false);
+  }
+
+  function handleOpenSelectModal() {
+    setModalVisible(true);
+  }
+
   return (
     <Container>
       <Content>
@@ -106,10 +118,26 @@ export function ScheduleService(){
         
       </Content>
 
+      <Modal 
+        visible={modalVisible} 
+        animationType='fade'
+        transparent={true}
+        style={{marginTop: '50%'}}
+      > 
+      <ModalField>
+        <ConfirmSelectedModal 
+            date='12/04/2022'
+            time='12:00'
+            price={10}
+            closeSelectModal={handleCloseSelectModal}
+        />
+      </ModalField>
+      </Modal>
+
         <Footer>
           <Button 
                 title="Cadastrar"
-                onPress={() => {}}
+                onPress={handleOpenSelectModal}
             />
         </Footer>   
     </Container>

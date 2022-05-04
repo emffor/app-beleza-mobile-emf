@@ -14,8 +14,8 @@ import {
 } from '@expo-google-fonts/roboto';
 
 import { SignIn } from './src/screens/SignIn';
-import { Routes } from './src/routes';
 import { RegistrationData } from './src/screens/RegistrationData';
+import { Routes } from './src/routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({

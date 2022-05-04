@@ -7,6 +7,7 @@ import { AppTabRoutes } from './app.tab.routes';
 import { AuthRoutes } from './auth.routes';
 import { Home } from '../screens/Home';
 import { ScheduleService } from '../screens/ScheduleService';
+import { ConfirmSelectedModal } from '../screens/ConfirmSelectedModal';
 
 type User = {
   uid: string;
