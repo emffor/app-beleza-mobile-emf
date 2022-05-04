@@ -8,6 +8,8 @@ import { AuthRoutes } from './auth.routes';
 import { Home } from '../screens/Home';
 import { ScheduleService } from '../screens/ScheduleService';
 import { ConfirmSelectedModal } from '../screens/ConfirmSelectedModal';
+import { Payment } from '../screens/Payment';
+
 
 type User = {
   uid: string;
@@ -27,7 +29,7 @@ export function Routes() {
   return (
     <NavigationContainer>
       {/* {(user ? <AppTabRoutes /> : <AuthRoutes />)}  */} 
-      <ScheduleService />
+      <Payment />
     </NavigationContainer>
   )
 }

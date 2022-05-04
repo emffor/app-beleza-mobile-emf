@@ -4,9 +4,6 @@ import { Button } from '../../components/Form/Button';
 import { ButtonBack } from '../../components/Form/ButtonBack';
 import { ButtonTime } from '../../components/Form/ButtonTime';
 
-import { timesMorning } from '../../utils/times';
-import { timesAfternoon } from '../../utils/times';
-import { timesEvening } from '../../utils/times';
 import { ConfirmSelectedModal } from '../ConfirmSelectedModal';
 
 import {

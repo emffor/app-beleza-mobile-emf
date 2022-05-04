@@ -7,8 +7,6 @@ import {
   Time,
 } from './styles';
 
-
-
 interface TimeProps extends TouchableOpacityProps {
     time: string;
     status: 'active' | 'waiting' | 'disabled';
@@ -18,7 +16,7 @@ interface colors {
     blue: 'theme.colors.blue_sky';
 }
 
-export function ButtonTime( { 
+export function ButtonTime({ 
     time, 
     status, 
     ...rest 

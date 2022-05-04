@@ -1,8 +1,5 @@
-import styled, { css } from 'styled-components/native';
-import { Feather } from '@expo/vector-icons';
+import styled from 'styled-components/native';
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
-
-
 
 export const Container = styled.View`
     width: ${RFValue(150)}px;
