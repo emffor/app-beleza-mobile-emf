@@ -27,7 +27,7 @@ export const Title = styled.Text`
   font-family: ${({ theme }) => theme.fonts.medium};
   font-size: ${RFValue(14)}px;
   color: ${({ theme }) => theme.colors.text_700};
-
+  
 `;
 
 export const TextPrice = styled.Text`
@@ -57,7 +57,7 @@ export const Button = styled.TouchableOpacity`
   background-color:${({ theme }) => theme.colors.blue_sky};
 
   border-radius: 50px;
-  margin-top: 10px;
+  margin-top: ${RFValue(10)}px;
 `
 
 export const TextButton = styled.Text`

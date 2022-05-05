@@ -9,13 +9,15 @@ import { useNavigation } from '@react-navigation/native';
 
 import {
   Container,
+  Content,
   Form,
   Fields,
   Footer,
   FieldCheck,
   Title,
   SelectedTerms,
-  IconSelected
+  IconSelected,
+  FieldBack
 } from './styles';
 
 export function RegistrationData(){
@@ -32,7 +34,6 @@ export function RegistrationData(){
   function handleGoBAck(){
     navigation.goBack();
   }
-
 
   function handleCreateUserAccount(){
     auth()
@@ -58,12 +59,15 @@ export function RegistrationData(){
    
   return (
     <Container>
-         <Form>
-                <ButtonBack 
-                    title="Fazer cadastro"
-                    onPress={handleGoBAck}
-                /> 
 
+      <Content>
+         <Form>
+              <FieldBack>
+                <ButtonBack 
+                      title="Fazer cadastro"
+                      onPress={handleGoBAck}
+                  /> 
+              </FieldBack>
            <Fields>
                 <Input 
                     placeholder="Nome Completo"
@@ -77,11 +81,20 @@ export function RegistrationData(){
                 />
 
                 <Input 
+                    placeholder="CPF"
+                    onChangeText={setEmail}
+                />
+
+                <Input 
+                    placeholder="Telefone"
+                    onChangeText={setEmail}
+                />
+
+                <Input 
                     placeholder="Senha"
                     secureTextEntry={true}
                     onChangeText={setPassword}
                 />
-                
 
                 <FieldCheck>
                   <SelectedTerms isActive={isActive} onPress={isActiveCheck}>
@@ -102,7 +115,8 @@ export function RegistrationData(){
                 title="Cadastrar"
                 onPress={handleCreateUserAccount}
             />
-        </Footer>     
+        </Footer>   
+      </Content>  
     </Container>
   );
 }

@@ -6,14 +6,16 @@ interface IsActiveProps {
     isActive: boolean;
 }
 
-export const Container = styled.View`
+export const Container = styled.ScrollView``;
+
+export const Content = styled.View`
     flex: 1;  
     background: ${({ theme }) => theme.colors.primary_100};  
     justify-content: space-between;
 `;
 
 export const Form = styled.View`
-    margin-top: 50px;
+    margin-top: ${RFValue(20)}px;
     width: 100%;
     
     justify-content: space-between;
@@ -25,16 +27,20 @@ export const Fields = styled.View`
     margin-top: 40px;
 `;
 
+export const FieldBack = styled.View`
+    margin-bottom: ${RFValue(-40)}px;
+    margin-left: ${RFValue(25)}px;
+`;
+
 
 export const FieldCheck = styled.View`
     flex-direction: row;
 
-    margin-top: 27px;
+    margin-top: 10px;
     
     align-items: center;
     padding-left: 10px;
 `;
-
 
 export const Title = styled.Text`
     font-family: ${({ theme }) => theme.fonts.regular};
@@ -48,12 +54,11 @@ export const Footer = styled.View`
     height: ${RFValue(118)}px;
 
     padding: 0 39px;
-    margin-top: 60px;
+    margin-top: ${RFValue(60)}px;
     justify-content: center;
 
     background: ${({ theme }) => theme.colors.shape};
-
-    
+   
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 `;

@@ -19,8 +19,6 @@ interface Props extends TouchableOpacityProps {
 }
 
 export function CategoryCard({ data, ...rest }: Props) {
-
-
   return (
     <Container>
 
