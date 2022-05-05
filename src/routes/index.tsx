@@ -8,6 +8,7 @@ import { AuthRoutes } from './auth.routes';
 import { AddCard } from '../screens/AddCard';
 import { AddAddress } from '../screens/AddAddress';
 import { OrderStatus } from '../screens/OrderStatus';
+import { Search } from '../screens/Search';
 
 
 type User = {
@@ -28,7 +29,7 @@ export function Routes() {
   return (
     <NavigationContainer>
       {/* {(user ? <AppTabRoutes /> : <AuthRoutes />)}  */} 
-      <OrderStatus/>
+      <Search/>
     </NavigationContainer>
   )
 }

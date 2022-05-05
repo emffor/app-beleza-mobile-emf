@@ -8,6 +8,7 @@ export const Container = styled.View`
   border-radius: 30px;
 
   margin-right: 20px;
+  margin-top: 20px;
 `;
 
 export const LogoImage = styled.Image`

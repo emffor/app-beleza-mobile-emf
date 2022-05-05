@@ -5,6 +5,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import theme from '../theme';
 import { Home } from '../screens/Home';
 import { ScheduleService } from '../screens/ScheduleService';
+import { OrderStatus } from '../screens/OrderStatus';
 const { Navigator, Screen } = createBottomTabNavigator();
 
 export function AppTabRoutes() {
@@ -51,7 +52,21 @@ export function AppTabRoutes() {
             />
           ),     
         }}
-      />    
+      />
+
+    <Screen
+        name="OrderStatus"
+        component={OrderStatus}
+        options={{
+          tabBarIcon: ({ size, color }) => (
+            <MaterialIcons
+              name="home"
+              size={size}
+              color={color}
+            />
+          ),     
+        }}
+      />      
     </Navigator>
   )
 }

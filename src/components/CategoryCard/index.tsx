@@ -1,7 +1,6 @@
 import React from 'react';
 import { TouchableOpacityProps } from 'react-native';
-import GasolineSvg from '../../assets/gasoline.svg';
-import { CategoryDTO } from '../../dtos/CategoryDTO';
+import { ServicesDTO } from '../../dtos/ServicesDTO';
 
 import {
   Container,
@@ -16,7 +15,7 @@ import {
 } from './styles';
 
 interface Props extends TouchableOpacityProps {
-  data: CategoryDTO;
+  data: ServicesDTO;
 }
 
 export function CategoryCard({ data, ...rest }: Props) {

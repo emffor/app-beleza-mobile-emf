@@ -23,8 +23,8 @@ import {
 import { NavigationProp, ParamListBase, useNavigation } from '@react-navigation/native';
 import { HighlightCard } from '../../components/HighlightCard';
 
-import CashBackSvg from '../../assets/cashback.svg';
-import SaleOffSvg from '../../assets/saleoff.svg';
+import CashBackSvg from '../../assets/HighlightCard/cashback.svg';
+import SaleOffSvg from '../../assets/HighlightCard/saleoff.svg';
 
 import { CategoryCard } from '../../components/CategoryCard';
 import { FlatList } from 'react-native';
