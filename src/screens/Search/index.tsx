@@ -91,7 +91,7 @@ export function Search(){
             <ScrollCategory>
                 { 
                     category.map(item => (
-                    <HighlightCardCategory data={item} />
+                    <HighlightCardCategory key={item.id} data={item} />
                     ))
                 }
             </ScrollCategory>
@@ -103,11 +103,10 @@ export function Search(){
         <ScrollServices>
               { 
                 services.map(item => (
-                  <CategoryCard data={item}/>
+                  <CategoryCard key={item.id} data={item}/>
                 ))
               }
         </ScrollServices>
-
         </Services>
     </Container>
   );

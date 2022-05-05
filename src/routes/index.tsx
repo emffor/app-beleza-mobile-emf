@@ -9,6 +9,7 @@ import { AddCard } from '../screens/AddCard';
 import { AddAddress } from '../screens/AddAddress';
 import { OrderStatus } from '../screens/OrderStatus';
 import { Search } from '../screens/Search';
+import { SearchCategory } from '../screens/SearchCategory';
 
 
 type User = {
@@ -29,7 +30,7 @@ export function Routes() {
   return (
     <NavigationContainer>
       {/* {(user ? <AppTabRoutes /> : <AuthRoutes />)}  */} 
-      <Search/>
+      <SearchCategory />
     </NavigationContainer>
   )
 }

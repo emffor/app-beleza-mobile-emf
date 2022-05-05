@@ -11,3 +11,78 @@ export const servicesDone = [
     {id: '4' , title: 'Pés e Mãos', date: 'Terça feira 10/04/22 as 11:00h', stars: 5 , status: 'Serviço finalizado'},
     {id: '5' , title: 'Cabelo', date: 'Terça feira 10/04/22 as 21:00h', stars: 3 , status: 'Serviço finalizado'},
 ];
+
+export const services = [
+    {
+      id: '12346',
+      photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
+      title: 'Pés e Mãos',
+      price: 20
+    },
+    {
+      id: '12347',
+      photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
+      title: 'Mãos',
+      price: 12
+    },
+    {
+      id: '12348',
+      photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
+      title: 'Pés',
+      price: 15
+    },
+    {
+      id: '12310',
+      photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
+      title: 'Pintar Unhas',
+      price: 26
+    },
+    {
+        id: '122346',
+        photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
+        title: 'Pés e Mãos',
+        price: 20
+      },
+      {
+        id: '123a47',
+        photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
+        title: 'Mãos',
+        price: 12
+      },
+      {
+        id: '12d348',
+        photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
+        title: 'Pés',
+        price: 15
+      },
+      {
+        id: '123130',
+        photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
+        title: 'Pintar Unhas',
+        price: 26
+      },
+      {
+        id: '1n2346',
+        photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
+        title: 'Pés e Mãos',
+        price: 20
+      },
+      {
+        id: 'u12347',
+        photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
+        title: 'Mãos',
+        price: 12
+      },
+      {
+        id: '123484',
+        photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
+        title: 'Pés',
+        price: 15
+      },
+      {
+        id: '1y2310',
+        photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
+        title: 'Pintar Unhas',
+        price: 26
+      },
+  ]
