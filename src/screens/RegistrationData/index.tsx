@@ -5,6 +5,7 @@ import { Button } from '../../components/Form/Button';
 import { ButtonBack } from '../../components/Form/ButtonBack';
 import { Input } from '../../components/Form/Input';
 import auth from '@react-native-firebase/auth';
+import { useNavigation } from '@react-navigation/native';
 
 import {
   Container,
@@ -12,14 +13,26 @@ import {
   Fields,
   Footer,
   FieldCheck,
-  Checkbox,
-  Title
+  Title,
+  SelectedTerms,
+  IconSelected
 } from './styles';
 
 export function RegistrationData(){
+  const navigation = useNavigation();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [isActive, setIsActive] = useState(false);
+
+  function isActiveCheck(){
+    setIsActive(!isActive);
+  }
+
+  function handleGoBAck(){
+    navigation.goBack();
+  }
+
 
   function handleCreateUserAccount(){
     auth()
@@ -43,13 +56,12 @@ export function RegistrationData(){
 
    console.log(name, email, password);
    
-
-
   return (
     <Container>
          <Form>
                 <ButtonBack 
                     title="Fazer cadastro"
+                    onPress={handleGoBAck}
                 /> 
 
            <Fields>
@@ -72,9 +84,11 @@ export function RegistrationData(){
                 
 
                 <FieldCheck>
-                  <Checkbox>
-
-                  </Checkbox>
+                  <SelectedTerms isActive={isActive} onPress={isActiveCheck}>
+                    <IconSelected 
+                      name="check"
+                    />
+                  </SelectedTerms>
                   
                   <Title>
                     Aceito os termos e condições

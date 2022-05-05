@@ -14,6 +14,7 @@ export default {
       pink: '#EFCCD8',
       coral: '#D28369',
       blue_marine: '#0F5BFF',
+      blue_marine_light: '#1089FF',
       blue_sky: '#95B8C4',
       yellow_bus: '#FFD800',
 
@@ -23,6 +24,7 @@ export default {
       line: '#EBEBF0',
 
       shape: '#FFFFFF',
+      shape_100: '#FAFAFA',
       shape_dark: '#000000',
   },
 
@@ -30,7 +32,6 @@ export default {
     regular: 'Roboto_400Regular',
     medium: 'Roboto_500Medium',
     bold: 'Roboto_700Bold',
-    black: 'Roboto_900Black',
-    
+    black: 'Roboto_900Black',   
   }
 }

@@ -5,7 +5,7 @@ import LogoBelezaSvg from '../../assets/logobelleza.svg';
 import LogoShopSvg from '../../assets/logoshop.svg';
 import { Button } from '../../components/Form/Button';
 
-import { ParamListBase, NavigationProp, useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 import {
   Container,
@@ -23,14 +23,15 @@ import {
 export function Splash(){
   const navigation = useNavigation();
 
-  const handleNextPage = () => {
+  const handleNavigationSignIn = () => {
     navigation.navigate('SignIn');
   }
 
-  const handleGoBAck = () => {
-    navigation.goBack();
-    
+  const handleNavigationRegistration = () => {
+    navigation.navigate('RegistrationData');
   }
+
+  
 
   return (
     <Container>
@@ -64,11 +65,11 @@ export function Splash(){
             <Footer>
               <Button 
                 title="Entrar"
-                onPress={handleNextPage}
+                onPress={handleNavigationSignIn}
               />
 
               <ButtonRegister
-                onPress={() => {}}
+                onPress={handleNavigationRegistration}
               >
                 <TitleRegister>Fazer Cadastro</TitleRegister>
               </ButtonRegister>

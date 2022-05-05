@@ -13,7 +13,7 @@ export const Container = styled.TextInput`
     
     border-width: 1px;
     border-color: ${({ theme }) => theme.colors.border};
-    border-radius: 12px;
+    border-radius: 25px;
 
     margin-bottom: 20px;
 `;

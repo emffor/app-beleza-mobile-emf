@@ -1,5 +1,10 @@
 import { RFValue } from 'react-native-responsive-fontsize';
-import styled from 'styled-components/native';
+import styled, {css} from 'styled-components/native';
+import { AntDesign } from '@expo/vector-icons';
+
+interface IsActiveProps {
+    isActive: boolean;
+}
 
 export const Container = styled.View`
     flex: 1;  
@@ -27,23 +32,15 @@ export const FieldCheck = styled.View`
     margin-top: 27px;
     
     align-items: center;
+    padding-left: 10px;
 `;
 
-export const Checkbox = styled.View`
-    width: 20px;
-    height: 20px;
-
-    margin-right: 10px;
-
-    border-width: 1px;
-    border-radius: 10px;
-    border-color: ${({ theme }) => theme.colors.text};
-`;
 
 export const Title = styled.Text`
     font-family: ${({ theme }) => theme.fonts.regular};
     font-size: ${RFValue(14)}px;
     color: ${({ theme }) => theme.colors.title};
+    margin-left: 10px;
 `;
 
 export const Footer = styled.View`
@@ -59,4 +56,29 @@ export const Footer = styled.View`
     
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+`;
+
+export const SelectedTerms = styled.TouchableOpacity<IsActiveProps>`
+    width: 25px;
+    height: 25px;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+
+    background-color: 
+    ${({ isActive, theme }) => 
+        isActive ? theme.colors.blue_marine_light : theme.colors.shape
+    };
+
+    ${({ isActive, theme }) => !isActive && css`
+        border-width: 1px;
+        border-color: ${theme.colors.text};
+    `};
+`;
+
+export const IconSelected = styled(AntDesign)`
+    font-size: 16px;
+    color: ${({ theme }) => theme.colors.shape};
 `;

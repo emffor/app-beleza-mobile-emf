@@ -18,14 +18,27 @@ import {
   Title,
   TitleRegister,
   TitleRegisterButton,
+  FormFooter
 } from './styles';
 import { Alert } from 'react-native';
+import { InputPassword } from '../../components/Form/InputPassword';
+
 
 
 export function SignIn(){
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigation = useNavigation();
+
+  function handleNavigationRegistration(){
+    navigation.navigate('RegistrationData');
+  }
+
+
+  async function handleSignInAnonymous() {
+    const { user } = await auth().signInAnonymously();
+    console.log(user);
+  }
 
    function handleSignInWithEmailAndPassword(){
     auth()
@@ -59,17 +72,14 @@ export function SignIn(){
                   onPress={handleGoBAck}
               /> 
 
-           <Fields>
-
-                
+           <Fields>        
                 <Input 
                     placeholder="Email"
                     onChangeText={setEmail}
                 />
 
-                <Input 
+                <InputPassword 
                     placeholder="Senha"
-                    secureTextEntry={true}
                     onChangeText={setPassword}
                 />
 
@@ -77,29 +87,28 @@ export function SignIn(){
                 <FieldCheck>
                   <Button 
                     title="Entrar"
-                    onPress={handleSignInWithEmailAndPassword}
+                    onPress={handleSignInAnonymous}
                   />
 
                   <ButtonForgot
                     onPress={handleForgotPassword}
                     >
                     <Title>Esqueceu a senha?</Title>
-                  </ButtonForgot>
-                  
-                </FieldCheck>
-
-                
+                  </ButtonForgot>            
+                </FieldCheck>          
             </Fields>
-        </Form>    
+        </Form>
 
+      <FormFooter>   
         <Footer>
         <TitleRegister>Não possui conta?</TitleRegister>
           <ButtonRegister
-            onPress={() => {}}
+            onPress={handleNavigationRegistration}
             >
             <TitleRegisterButton>Cadastre-se</TitleRegisterButton>
           </ButtonRegister>
         </Footer>     
+      </FormFooter> 
     </Container>
   );
 }
