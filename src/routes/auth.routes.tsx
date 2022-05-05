@@ -14,7 +14,7 @@ export function AuthRoutes(){
     screenOptions={{
         headerShown: false,
     }}   
-    initialRouteName="Splash">
+    >
       <Screen 
         name="Splash"
         component={Splash}
