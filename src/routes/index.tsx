@@ -6,6 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { AppTabRoutes } from './app.tab.routes';
 import { AuthRoutes } from './auth.routes';
 import { AddCard } from '../screens/AddCard';
+import { AddAddress } from '../screens/AddAddress';
 
 
 type User = {
@@ -26,7 +27,7 @@ export function Routes() {
   return (
     <NavigationContainer>
       {/* {(user ? <AppTabRoutes /> : <AuthRoutes />)}  */} 
-      <AddCard/>
+      <AddAddress/>
     </NavigationContainer>
   )
 }

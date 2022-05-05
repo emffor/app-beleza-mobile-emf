@@ -2,17 +2,18 @@ import React from 'react';
 import { ButtonBack } from '../../components/Form/ButtonBack';
 import { Input } from '../../components/Form/Input';
 import { InputForm } from '../../components/Form/InputForm';
-import CardDataSvg from '../../assets/carddata.svg';
 
 import {
   Container,
   Content,
   FieldInputs,
   FormInput,
-  FieldIcon
+  FormCep,
+  Button,
+  ButtonText
 } from './styles';
 
-export function AddCard(){
+export function AddAddress(){
   return (
     <Container>
         <Content>
@@ -21,35 +22,36 @@ export function AddCard(){
                 title="Adicionar Cartão"
             />
             <FieldInputs>
-                  <Input 
-                      placeholder="Número do cartão"
-                  />
+                      <FormCep>
+                          <InputForm 
+                              placeholder="CEP"
+                          />
 
-                  <FieldIcon>
-                    <CardDataSvg 
-                      width={32}
-                      height={25}
-                    />
-                  </FieldIcon>
+                          <Button>
+                              <ButtonText>Buscar CEP</ButtonText>
+                          </Button>
+                      </FormCep>
+
+
 
                  <FormInput>
 
                     <InputForm 
-                          placeholder="Validade"
+                          placeholder="Número"
                       />
 
                       <InputForm 
-                          placeholder="CVV"
+                          placeholder="Complemento"
                       />    
 
                 </FormInput>   
 
                 <Input 
-                      placeholder="Nome do titular"
+                      placeholder="Bairro"
                   />
 
                   <Input 
-                      placeholder="CPF"
+                      placeholder="Estado"
                   />
             </FieldInputs>
 

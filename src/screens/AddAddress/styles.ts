@@ -9,13 +9,26 @@ export const Content = styled.View`
     margin-top: 60px;
     padding: 0 25px;
 `;
+
+export const FormCep = styled.View`
+    flex-direction: row;
+    align-items: center;
+`;
+
+export const Button = styled.TouchableOpacity`
+    margin-right: 100px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+
+    border-bottom-width: 1px;
+    text-align: center;
+    
+    
+    
+`;
+export const ButtonText = styled.Text``;
 export const FieldInputs = styled.View``;
 
-export const FieldIcon = styled.View`
-    position: absolute;
-    margin-top: ${RFValue(25)}px;
-    padding-left: ${RFValue(250)}px;
-`;
 
 export const FormInput = styled.View`
     flex-direction: row;

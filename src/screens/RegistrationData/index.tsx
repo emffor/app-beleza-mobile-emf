@@ -3,7 +3,7 @@ import { Alert } from 'react-native';
 import { Button } from '../../components/Form/Button';
 
 import { ButtonBack } from '../../components/Form/ButtonBack';
-import { Input } from '../../components/Form/input';
+import { Input } from '../../components/Form/Input';
 import auth from '@react-native-firebase/auth';
 
 import {
@@ -56,7 +56,7 @@ export function RegistrationData(){
                 <Input 
                     placeholder="Nome Completo"
                     onChangeText={setName}
-  
+
                 />
                 
                 <Input 
