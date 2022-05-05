@@ -12,9 +12,6 @@ import {
   IconSelected,
 } from './styles';
 
-interface KeyProps {
-    
-}
 interface Props {
     isActive: boolean;
     selectCard: () => void;

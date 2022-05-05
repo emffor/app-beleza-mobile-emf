@@ -4,7 +4,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 import { Card } from '../../components/Card';
 import { Button } from '../../components/Form/Button';
 import { cards } from '../../utils/cards';
-import { PortionSelectedModal } from '../PortionSelectedModal';
+import { PortionSelectedModal } from '../Modal/PortionSelectedModal';
 
 import {
   Container,

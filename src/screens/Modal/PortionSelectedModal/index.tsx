@@ -1,7 +1,7 @@
 import React from 'react';
 import { FlatList, TouchableOpacityProps } from 'react-native';
-import { Button } from '../../components/Form/Button';
-import { portions } from '../../utils/portions';
+import { Button } from '../../../components/Form/Button';
+import { portions } from '../../../utils/portions';
 
 import {
   Container,

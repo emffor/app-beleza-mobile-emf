@@ -4,7 +4,7 @@ import { Button } from '../../components/Form/Button';
 import { ButtonBack } from '../../components/Form/ButtonBack';
 import { ButtonTime } from '../../components/Form/ButtonTime';
 
-import { ConfirmSelectedModal } from '../ConfirmSelectedModal';
+import { ConfirmSelectedModal } from '../Modal/ConfirmSelectedModal';
 
 import {
   Container,

@@ -62,7 +62,6 @@ export const SelectedCard = styled.TouchableOpacity<IsActiveProps>`
         border-width: 1px;
         border-color: ${theme.colors.text};
     `};
-    
 `;
 
 export const IconSelected = styled(Entypo)`

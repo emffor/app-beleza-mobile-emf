@@ -15,6 +15,7 @@ export default {
       coral: '#D28369',
       blue_marine: '#0F5BFF',
       blue_sky: '#95B8C4',
+      yellow_bus: '#FFD800',
 
       border: '#DDE5F0',
       border_light:'rgba(221,229,240,0.5)',
