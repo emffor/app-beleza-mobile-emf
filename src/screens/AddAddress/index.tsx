@@ -1,5 +1,7 @@
+import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { Modal } from 'react-native';
+import { Button } from '../../components/Form/Button';
 import { ButtonBack } from '../../components/Form/ButtonBack';
 import { Input } from '../../components/Form/Input';
 import { InputForm } from '../../components/Form/InputForm';
@@ -12,7 +14,7 @@ import {
   FieldInputs,
   FormInput,
   FormCep,
-  Button,
+  ButtonCep,
   ButtonText,
   FieldStateCity,
   ButtonState,
@@ -21,12 +23,15 @@ import {
   TitleButtonCity,
   IconCity,
   IconState,
+  Footer,
+  FieldButtonAdd
 } from './styles';
 
 export function AddAddress(){
     const [ modalStateVisible, setStateModalVisible ] = useState(false);
     const [ modalCityVisible, setCityModalVisible ] = useState(false);
-  
+    const navigation = useNavigation();
+
     function handleOpenSelectStateModal(){
         setStateModalVisible(true);
     }
@@ -43,12 +48,20 @@ export function AddAddress(){
         setCityModalVisible(false);
     }
 
+    function handleGoBAck(){
+        navigation.goBack();
+    }
+
+    function handleAddAddress(){
+        navigation.navigate('Payment');
+    }
+
   return (
     <Container>
         <Content>
             <ButtonBack 
-                onPress={() => {}}
-                title="Adicionar Cartão"
+                onPress={handleGoBAck}
+                title="Adicionar Endereço"
             />
             <FieldInputs>
 
@@ -56,9 +69,9 @@ export function AddAddress(){
                     <InputForm 
                         placeholder="CEP"
                     />
-                    <Button>
+                    <ButtonCep>
                         <ButtonText>Buscar CEP</ButtonText>
-                    </Button>
+                    </ButtonCep>
                 </FormCep>
 
                 <Input 
@@ -135,6 +148,15 @@ export function AddAddress(){
                   
             </FieldInputs>
         </Content>
+
+        <Footer>        
+              <FieldButtonAdd>
+                <Button 
+                  title="Adicionar Endereço"
+                  onPress={handleAddAddress}
+                />
+              </FieldButtonAdd>
+          </Footer>
     </Container>
   );
 }
