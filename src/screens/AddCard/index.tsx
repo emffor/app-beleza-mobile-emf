@@ -9,8 +9,11 @@ import {
   Content,
   FieldInputs,
   FormInput,
-  FieldIcon
+  FieldIcon,
+  Footer,
+  FieldButtonAdd
 } from './styles';
+import { Button } from '../../components/Form/Button';
 
 export function AddCard(){
   return (
@@ -52,10 +55,15 @@ export function AddCard(){
                       placeholder="CPF"
                   />
             </FieldInputs>
-
         </Content>
 
-
+          <Footer>        
+              <FieldButtonAdd>
+                <Button 
+                  title="Adicionar Cartão"
+                />
+              </FieldButtonAdd>
+          </Footer>
     </Container>
   );
 }

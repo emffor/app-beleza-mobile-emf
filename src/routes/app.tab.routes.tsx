@@ -2,15 +2,17 @@ import React from 'react';
 import { Platform } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Entypo } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import theme from '../theme';
-import { Home } from '../screens/Home';
-import { ScheduleService } from '../screens/ScheduleService';
 import { OrderStatus } from '../screens/OrderStatus';
 import { Search } from '../screens/Search';
+import { General } from '../screens/General';
+import { AppStackRoutes } from './app.stack.routes';
 import HomeSvg from '../assets/tabRoutes/home.svg';
+import SearchSvg from '../assets/tabRoutes/search.svg';
+import OrderSvg from '../assets/tabRoutes/order.svg';
+import CogSvg from '../assets/tabRoutes/cog.svg';
 
 
 const { Navigator, Screen } = createBottomTabNavigator();
@@ -20,8 +22,8 @@ export function AppTabRoutes() {
   return (
     <Navigator
       screenOptions={{
-        tabBarActiveTintColor: theme.colors.blue_sky,
-        tabBarInactiveTintColor: theme.colors.text,
+        tabBarActiveTintColor: theme.colors.coral,
+        tabBarInactiveTintColor: theme.colors.blue_sky,
         tabBarLabelPosition: 'beside-icon',
         headerShown: false,
         tabBarShowLabel: false,
@@ -36,14 +38,10 @@ export function AppTabRoutes() {
     >
       <Screen
         name="Home"
-        component={Home}
+        component={AppStackRoutes}
         options={{
           tabBarIcon: ({ size, color }) => (
-            <Feather
-              name="home"
-              size={size}
-              color={color}
-            />
+            <HomeSvg width={size} height={size} fill={color} />
           ), 
         }}
       />
@@ -53,11 +51,7 @@ export function AppTabRoutes() {
         component={Search}
         options={{
           tabBarIcon: ({ size, color }) => (
-            <AntDesign
-              name="search1"
-              size={size}
-              color={color}
-            />
+            <SearchSvg width={size} height={size} fill={color} />
           ),     
         }}
       />
@@ -67,25 +61,17 @@ export function AppTabRoutes() {
         component={OrderStatus}
         options={{
           tabBarIcon: ({ size, color }) => (
-            <AntDesign
-              name="profile"
-              size={size}
-              color={color}
-            />
+            <OrderSvg width={size} height={size} fill={color} />
           ),     
         }}
       /> 
 
     <Screen
-        name="ScheduleService"
-        component={ScheduleService}
+        name="General"
+        component={General}
         options={{
           tabBarIcon: ({ size, color }) => (
-            <MaterialCommunityIcons
-              name="cog"
-              size={size}
-              color={color}
-            />
+            <CogSvg width={size} height={size} fill={color} />
           ), 
         }}
       />

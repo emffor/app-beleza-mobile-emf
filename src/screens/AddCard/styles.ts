@@ -3,6 +3,7 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
     flex: 1;
+    justify-content: space-between;
 `;
 
 export const Content = styled.View`
@@ -22,3 +23,20 @@ export const FormInput = styled.View`
     justify-content: space-between;
     align-items: center;
 `;
+
+export const Footer = styled.View`
+    width: 100%;
+    background-color: ${({ theme }) => theme.colors.shape};
+
+
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+`;
+
+
+export const FieldButtonAdd = styled.View``;

@@ -21,19 +21,20 @@ export const Header = styled.View`
 
 export const HeaderContent = styled.View`
   justify-content: flex-end;
+  align-items: center;  
 `;
 
 export const Title = styled.Text`
     font-family: ${({ theme }) => theme.fonts.regular};
-    font-size: ${RFValue(30)}px;
+    font-size: 30px;
     color: ${({ theme }) => theme.colors.shape};
-    padding: 0 34px;
+    padding: 0 10px;
 `;
 export const Subtitle = styled.Text`
     font-family: ${({ theme }) => theme.fonts.regular};
-    font-size: ${RFValue(15)}px;
+    font-size: 15px;
     color: ${({ theme }) => theme.colors.shape};
-    padding: 0 34px;
+    padding: 0 10px;
     margin-bottom: 30px;
 `;
 
@@ -48,6 +49,8 @@ export const Localization = styled.TouchableOpacity`
     border-width: 1px;
     border-color: ${({ theme }) => theme.colors.border_light};
     border-radius: 12px;
+
+    margin-top: 20px;
 `;
 
 export const Address = styled.Text`

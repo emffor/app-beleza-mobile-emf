@@ -6,5 +6,7 @@ declare namespace ReactNavigation {
       SignIn: undefined
       RegistrationData: undefined
       Schedule: undefined
+      Payment: undefined
+      AddCard: undefined
     }
   }

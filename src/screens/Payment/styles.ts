@@ -232,3 +232,12 @@ export const ModalField = styled.View`
 `;
 
 
+export const ScrollCards = styled.ScrollView.attrs({
+    showsVerticalScrollIndicator: false,
+    contentContainerStyle: {
+        marginBottom: 20,
+    }
+})`
+
+`;
+

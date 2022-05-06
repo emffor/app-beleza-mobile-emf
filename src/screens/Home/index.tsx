@@ -64,8 +64,8 @@ export function Home(){
 
   const navigation = useNavigation<NavigationProp<ParamListBase>>();
 
-  const handleNextPage = () => {
-    navigation.navigate('Schedule');
+  const handleScheduleService = () => {
+    navigation.navigate('ScheduleService');
   }
 
   return (
@@ -132,6 +132,7 @@ export function Home(){
                 renderItem={({item}) => (
                   <CategoryCard 
                     data={item}
+                    onPress={handleScheduleService}
                   />
                 )}   
             />    
@@ -147,6 +148,7 @@ export function Home(){
                 renderItem={({item}) => (
                   <CategoryCard 
                     data={item}
+                    onPress={handleScheduleService}
                   />
                 )}   
             />    
@@ -162,6 +164,7 @@ export function Home(){
                 renderItem={({item}) => (
                   <CategoryCard 
                     data={item}
+                    onPress={handleScheduleService}
                   />
                 )}   
             />    
@@ -177,6 +180,7 @@ export function Home(){
                 renderItem={({item}) => (
                   <CategoryCard 
                     data={item}
+                    onPress={handleScheduleService}
                   />
                 )}   
             />    

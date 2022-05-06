@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { Modal, FlatList } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -47,6 +48,15 @@ import {
 export function Payment(){
   const [ selectedCard, setSelectedCard ] = useState(false);
   const [ modalVisible, setModalVisible ] = useState(false);
+  const navigation = useNavigation();
+
+  function handleBackClick(){
+    navigation.goBack();
+  }
+
+  function handleAddCard(){
+    navigation.navigate('AddCard');
+  }
 
   function handleSelectCard(){
     selectedCard === false ? setSelectedCard(true) : setSelectedCard(false);
@@ -66,7 +76,9 @@ export function Payment(){
         <Content>
 
           <FieldButtonBack>
-            <ButtonBack>
+            <ButtonBack 
+              onPress={handleBackClick}
+            >
               <FieldIcon>
                 <Icon 
                   name="chevron-left"
@@ -101,7 +113,9 @@ export function Payment(){
                 <ContentTitleCard>
                   <TitleCard>Escolha o cartão</TitleCard>
 
-                  <AddButton>
+                  <AddButton
+                    onPress={handleAddCard}
+                  >
                     <TitleAddButton>+ Adicionar</TitleAddButton>
                     </AddButton>
                 </ContentTitleCard>
@@ -143,7 +157,8 @@ export function Payment(){
                     <ScrollView>
                       {
                         cards.map(item => (
-                          <Card 
+                          <Card
+                            key={item.id}
                             isActive={selectedCard}
                             selectCard={handleSelectCard}
                             nameCard={item.name}

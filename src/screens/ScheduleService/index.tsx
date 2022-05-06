@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { Modal } from 'react-native';
 import { Button } from '../../components/Form/Button';
@@ -31,6 +32,7 @@ import {
 } from './styles';
 
 export function ScheduleService(){
+  const navigation = useNavigation();
   const [modalVisible, setModalVisible] = useState(false);
 
   function handleCloseSelectModal() {
@@ -41,12 +43,16 @@ export function ScheduleService(){
     setModalVisible(true);
   }
 
+  function handleBackClick() {
+    navigation.goBack();
+  }
+
   return (
     <Container>
       <Content>
       <Header>
         <ButtonBack 
-            onPress={() => {}}
+            onPress={handleBackClick}
             title='Agendar serviço'
           />
 

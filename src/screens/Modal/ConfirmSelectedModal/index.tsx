@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { TouchableOpacityProps } from 'react-native';
 import { Button } from '../../../components/Form/Button';
@@ -31,6 +32,12 @@ export function ConfirmSelectedModal({
   price,
   closeSelectModal,
 }: Props) {
+  const navigation = useNavigation();
+
+  function HandlePayment(){
+    navigation.navigate('Payment');
+  }
+
   return (
     <Container>
         <Content>
@@ -57,7 +64,7 @@ export function ConfirmSelectedModal({
                 <FieldButton>
                   <Button
                       title='Sim, continuar'
-                      onPress={() => {}}
+                      onPress={HandlePayment}
                   />
                 </FieldButton>
             </Footer>
