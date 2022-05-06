@@ -32,11 +32,11 @@ export function ConfirmationMessageModal({
         <Content>
           <Header>
             <Title>
-                Titulo da mensagem
+                Obrigado!!!
             </Title>
 
             <SubTitle>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam vitae sequi hic a aut. Sed blanditiis illo ea deserunt deleniti?  
+                Parabéns, seu pagamento foi efetuado com sucesso. 
             </SubTitle>
           </Header>    
  

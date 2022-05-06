@@ -1,9 +1,10 @@
 import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
-    flex: 1;
-    justify-content: space-between;
+export const Container = styled.ScrollView``;
+
+export const Form = styled.View`
+    
 `;
 
 export const Content = styled.View`
@@ -28,7 +29,6 @@ export const Footer = styled.View`
     width: 100%;
     background-color: ${({ theme }) => theme.colors.shape};
 
-
     padding-top: 30px;
     padding-bottom: 20px;
     padding-left: 40px;
@@ -36,6 +36,8 @@ export const Footer = styled.View`
 
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
+
+    margin-top: 80px;
 `;
 
 

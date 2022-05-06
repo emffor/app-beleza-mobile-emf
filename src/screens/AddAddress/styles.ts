@@ -2,7 +2,7 @@ import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
 import { AntDesign } from '@expo/vector-icons';
 
-export const Container = styled.View`
+export const Container = styled.ScrollView`
     flex: 1;
 `;
 
@@ -16,7 +16,7 @@ export const FormCep = styled.View`
     align-items: center;
 `;
 
-export const Button = styled.TouchableOpacity`
+export const ButtonCep = styled.TouchableOpacity`
     margin-right: 100px;
     margin-left: 20px;
     margin-bottom: 10px;
@@ -92,3 +92,21 @@ export const IconCity = styled(AntDesign)`
     padding-right: 15px;
     color: ${({ theme }) => theme.colors.text_300};
 `;
+
+export const Footer = styled.View`
+    width: 100%;
+    background-color: ${({ theme }) => theme.colors.shape};
+
+    margin-top: 30px;
+
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+`;
+
+
+export const FieldButtonAdd = styled.View``;

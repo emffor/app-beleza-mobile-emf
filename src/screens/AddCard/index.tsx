@@ -6,6 +6,7 @@ import CardDataSvg from '../../assets/carddata.svg';
 
 import {
   Container,
+  Form,
   Content,
   FieldInputs,
   FormInput,
@@ -23,11 +24,16 @@ export function AddCard(){
     navigation.navigate('AddAddress');
   }
 
+  function handleGoBack(){
+    navigation.goBack();
+  }
+
   return (
     <Container>
+      <Form>
         <Content>
             <ButtonBack 
-                onPress={() => {}}
+                onPress={handleGoBack}
                 title="Adicionar Cartão"
             />
             <FieldInputs>
@@ -62,9 +68,13 @@ export function AddCard(){
                       placeholder="CPF"
                   />
             </FieldInputs>
+
+            
         </Content>
 
-          <Footer>        
+
+
+        <Footer>        
               <FieldButtonAdd>
                 <Button 
                   title="Adicionar Cartão"
@@ -72,6 +82,7 @@ export function AddCard(){
                 />
               </FieldButtonAdd>
           </Footer>
+      </Form>
     </Container>
   );
 }
