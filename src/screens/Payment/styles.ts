@@ -155,7 +155,7 @@ export const TitleAddButton = styled.Text`
     padding-bottom: 10px;
 `;
 
-export const FieldCards = styled.View`
+export const FieldCards = styled.ScrollView`
     padding: 0px 24px;
     height: 200px;
 `;

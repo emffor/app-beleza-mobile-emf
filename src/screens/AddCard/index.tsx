@@ -14,8 +14,15 @@ import {
   FieldButtonAdd
 } from './styles';
 import { Button } from '../../components/Form/Button';
+import { useNavigation } from '@react-navigation/native';
 
 export function AddCard(){
+  const navigation = useNavigation();
+
+  function handleAddAddress(){
+    navigation.navigate('AddAddress');
+  }
+
   return (
     <Container>
         <Content>
@@ -61,6 +68,7 @@ export function AddCard(){
               <FieldButtonAdd>
                 <Button 
                   title="Adicionar Cartão"
+                  onPress={handleAddAddress}
                 />
               </FieldButtonAdd>
           </Footer>

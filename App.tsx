@@ -13,8 +13,6 @@ import {
   Roboto_900Black,
 } from '@expo-google-fonts/roboto';
 
-import { SignIn } from './src/screens/SignIn';
-import { RegistrationData } from './src/screens/RegistrationData';
 import { Routes } from './src/routes';
 
 export default function App() {

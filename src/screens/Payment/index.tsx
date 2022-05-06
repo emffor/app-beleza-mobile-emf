@@ -1,10 +1,10 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
-import { Modal, FlatList } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
+import { Modal } from 'react-native';
 import { Card } from '../../components/Card';
 import { Button } from '../../components/Form/Button';
 import { cards } from '../../utils/cards';
+import { ConfirmationMessageModal } from '../Modal/ConfirmationMessageModal';
 import { PortionSelectedModal } from '../Modal/PortionSelectedModal';
 
 import {
@@ -49,6 +49,8 @@ import {
 export function Payment(){
   const [ selectedCard, setSelectedCard ] = useState(false);
   const [ modalVisible, setModalVisible ] = useState(false);
+  const [ modalVisibleMsg, setModalVisibleMsg ] = useState(false);
+
   const navigation = useNavigation();
 
   function handleBackClick(){
@@ -69,6 +71,15 @@ export function Payment(){
 
   function handleCloseSelectModal(){
     setModalVisible(false);
+  }
+
+  function handleOpenMsgSelectModal(){
+    setModalVisibleMsg(true);
+  }
+
+  function handleCloseMsgSelectModal(){
+    setModalVisibleMsg(false);
+    navigation.navigate('OrderStatus');
   }
 
   return (
@@ -172,6 +183,23 @@ export function Payment(){
      
             </FieldCards>   
 
+            <Modal
+              visible={modalVisibleMsg} 
+              animationType='fade'
+              transparent={true}
+              style={{marginTop: '50%'}}
+            >
+              <ModalField>
+
+                <ConfirmationMessageModal 
+                    closeSelectModal={handleCloseMsgSelectModal}
+                    setConfirmation={() => {}}
+                />
+
+              </ModalField>
+
+            </Modal>
+
               <Footer>
                   <FieldPrice>
                         <PriceButton>R$ 29,90</PriceButton>
@@ -181,6 +209,7 @@ export function Payment(){
                     <FieldButtonPrice>
                       <Button 
                         title="Pagar"
+                        onPress={handleOpenMsgSelectModal}
                       />
                     </FieldButtonPrice>
                 </Footer>

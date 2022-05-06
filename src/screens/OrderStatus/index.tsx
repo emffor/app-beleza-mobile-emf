@@ -15,8 +15,6 @@ import {
 } from './styles';
 
 export function OrderStatus(){
-
-  
   return (
     <Container>
         <Content>
@@ -27,7 +25,10 @@ export function OrderStatus(){
             <ScrollView>
               {
                 servicesOpen.map(item => (
-                  <OpenOrdersCard data={item} />
+                  <OpenOrdersCard 
+                    data={item} 
+                    key={item.id}
+                  />
                 ))
               }
             </ScrollView>
@@ -37,7 +38,10 @@ export function OrderStatus(){
             <ScrollView>
               { 
                 servicesDone.map(item => (
-                  <DoneOrdersCard data={item} />
+                  <DoneOrdersCard 
+                    data={item} 
+                    key={item.id}
+                  />
                 ))
               }
             </ScrollView>

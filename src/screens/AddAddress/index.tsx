@@ -3,6 +3,7 @@ import { Modal } from 'react-native';
 import { ButtonBack } from '../../components/Form/ButtonBack';
 import { Input } from '../../components/Form/Input';
 import { InputForm } from '../../components/Form/InputForm';
+import { CityModal } from '../Modal/CityModal';
 import { StatesModal } from '../Modal/StatesModal';
 
 import {
@@ -24,6 +25,7 @@ import {
 
 export function AddAddress(){
     const [ modalStateVisible, setStateModalVisible ] = useState(false);
+    const [ modalCityVisible, setCityModalVisible ] = useState(false);
   
     function handleOpenSelectStateModal(){
         setStateModalVisible(true);
@@ -33,6 +35,13 @@ export function AddAddress(){
         setStateModalVisible(false);
     }
 
+    function handleOpenSelectCityModal(){
+        setCityModalVisible(true);
+    }
+
+    function handleCloseSelectCityModal(){
+        setCityModalVisible(false);
+    }
 
   return (
     <Container>
@@ -43,14 +52,18 @@ export function AddAddress(){
             />
             <FieldInputs>
 
-                      <FormCep>
-                          <InputForm 
-                              placeholder="CEP"
-                          />
-                          <Button>
-                              <ButtonText>Buscar CEP</ButtonText>
-                          </Button>
-                      </FormCep>
+                <FormCep>
+                    <InputForm 
+                        placeholder="CEP"
+                    />
+                    <Button>
+                        <ButtonText>Buscar CEP</ButtonText>
+                    </Button>
+                </FormCep>
+
+                <Input 
+                    placeholder="Rua"
+                />
                       
                  <FormInput>
 
@@ -68,12 +81,24 @@ export function AddAddress(){
                       placeholder="Bairro"
                   />
 
-                  <Input 
-                      placeholder="Estado"
-                  />
 
                   <FieldStateCity>
-                        <ButtonCity>
+
+                        <Modal 
+                            visible={modalCityVisible} 
+                            animationType='fade'
+                            style={{marginTop: '50%'}}
+                        >
+                            <CityModal 
+                                closeSelectModal={handleCloseSelectCityModal}
+                                setCity={() => {}}
+                                name="CE"
+                            />
+                        </Modal>
+
+                        <ButtonCity
+                            onPress={handleOpenSelectCityModal}
+                        >
                             <TitleButtonCity>
                                 Cidade
                             </TitleButtonCity>
@@ -83,7 +108,16 @@ export function AddAddress(){
                             />
                         </ButtonCity>
 
-                        <Modal visible={false}>
+                        <Modal 
+                            visible={modalStateVisible} 
+                            animationType='fade'
+                            style={{marginTop: '50%'}}
+                        >
+                            <StatesModal 
+                                closeSelectModal={handleCloseSelectStateModal}
+                                setStates={() => {}}
+                                state="CE"
+                            />
                             
                         </Modal>
 

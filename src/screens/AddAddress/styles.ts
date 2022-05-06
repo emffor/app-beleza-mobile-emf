@@ -51,6 +51,7 @@ export const ButtonState = styled.TouchableOpacity`
     border-color: ${({ theme }) => theme.colors.border};
     border-radius: 14px;
     background-color: ${({ theme }) => theme.colors.shape};
+    margin-left: 5px;
 
 `;
 export const TitleButtonState = styled.Text`

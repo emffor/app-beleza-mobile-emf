@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import { Ionicons } from '@expo/vector-icons';
 
 export const Container = styled.View`
     background-color: ${({theme}) => theme.colors.shape};
@@ -7,6 +8,7 @@ export const Container = styled.View`
 
 export const Content = styled.View`
     margin: 25px;
+    flex-direction: row;
 `;
 
 export const Header = styled.View`
@@ -19,20 +21,31 @@ export const Title = styled.Text`
     font-size: 18px;
     color: ${({theme}) => theme.colors.title};
     font-family: ${({theme}) => theme.fonts.regular};
-    padding-bottom: 40px;
+    padding-bottom: 50px;
 `;
 
+export const SubTitle = styled.Text`
+    font-size: 14px;
+    color: ${({theme}) => theme.colors.text_100};
+    padding-bottom: 50px;
+`;  
 
-export const Field = styled.TouchableOpacity`
+
+export const Field = styled.View`
     width: 100%;
+    flex-direction: row;
+    
+    justify-content: space-between;
     align-items: center;
     
-    border-bottom-width: 1px;
+    border-width: 2px;
     border-color: ${({ theme }) => theme.colors.text_100};
     border-radius: 7px;
+
+    margin-bottom: 30px;
 `;
 
-export const LabelStates = styled.Text`
+export const LabelPrice = styled.Text`
     font-family: ${({theme}) => theme.fonts.bold};
     color: ${({ theme }) => theme.colors.text_100};
     font-size: 16px;
@@ -41,8 +54,16 @@ export const LabelStates = styled.Text`
 `;
 
 export const Footer = styled.View`
-    align-items: center;
-    margin-bottom: -150px;
-    
+     position: absolute;
+     right: 0;
+     
 `;
 
+export const IconButton = styled(Ionicons)`
+    color: ${({ theme }) => theme.colors.shape_dark};
+    font-size: 20px;
+`;
+
+export const ButtonClose = styled.TouchableOpacity`
+    padding: 3px;
+`;

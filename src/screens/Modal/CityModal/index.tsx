@@ -1,6 +1,6 @@
 import React from 'react';
 import { FlatList, TouchableOpacityProps } from 'react-native';
-import { states } from '../../../utils/abnt';
+import { city } from '../../../utils/abnt';
 
 import {
   Container,
@@ -8,26 +8,26 @@ import {
   Header,
   Title,
   Field,
-  LabelStates,
+  LabelCity,
   Footer,
 } from './styles';
 
-interface States {
+interface City {
     id: string;
     name: string;
     state: string;
 }
 
 export interface Props extends TouchableOpacityProps {
-  state: string;
-  setStates: (state: States) => void;
+  name: string;
+  setCity: (name: City) => void;
   closeSelectModal: () => void;
 }
 
-export function StatesModal({ 
-    state, 
+export function CityModal({ 
+    name,
     closeSelectModal,
-    setStates,
+    setCity,
 }: Props) {
   return (
     <Container>
@@ -36,16 +36,16 @@ export function StatesModal({
             <Title>Estados</Title>
           </Header>    
              <FlatList 
-                data={states}
+                data={city}
                 keyExtractor={(item) => String(item.id)}
                 showsVerticalScrollIndicator={false}
                 renderItem={({ item }) => (
                 <Field
                   onPress={closeSelectModal}
                 >
-                    <LabelStates>
+                    <LabelCity>
                       {item.name} - {item.state}
-                    </LabelStates>
+                    </LabelCity>
                 </Field>
                 )}
              />   

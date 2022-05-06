@@ -32,7 +32,7 @@ export const Field = styled.TouchableOpacity`
     border-radius: 7px;
 `;
 
-export const LabelStates = styled.Text`
+export const LabelCity = styled.Text`
     font-family: ${({theme}) => theme.fonts.bold};
     color: ${({ theme }) => theme.colors.text_100};
     font-size: 16px;
