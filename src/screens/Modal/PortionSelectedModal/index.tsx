@@ -42,7 +42,9 @@ export function PortionSelectedModal({
                 showsVerticalScrollIndicator={false}
                 renderItem={({ item}) => (
                 <Field>
-                    <LabelPrice>Parcelamento em {item.name} sem juros</LabelPrice>
+                    <LabelPrice>
+                        Parcelamento em {item.name} sem juros
+                    </LabelPrice>
                 </Field>
                 )}
              />   

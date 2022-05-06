@@ -8,7 +8,9 @@ import {
 } from 'react-native-calendars';
 
 import {
-  Container
+  Container,
+  ButtonCloseModal,
+  ButtonCloseModalText,
 } from './styles';
 
 LocaleConfig.locales['pt-br'] = {
@@ -21,45 +23,59 @@ LocaleConfig.locales['pt-br'] = {
 
 LocaleConfig.defaultLocale = 'pt-br';
 
-export function Calendar(){
+interface Props {
+  onPress: () => void;
+}
+
+export function Calendar({ onPress } : Props){
   const theme = useTheme();
 
   return (
-    <CustomCalendar
-        renderArrow={( direction ) => 
-          <Feather
-            size={24}
-            color={theme.colors.shape_dark}
-            name={direction === 'left' ? 'chevron-left' : 'chevron-right'}
-          />  
-        }
+    <Container>
+        <CustomCalendar
+            renderArrow={( direction ) => 
+              <Feather
+                size={24}
+                color={theme.colors.shape_dark}
+                name={direction === 'left' ? 'chevron-left' : 'chevron-right'}
+              />  
+            }
 
-        headerStyle={{
-          backgroundColor: theme.colors.shape,
-          borderBottomWidth: 0.5,
-          borderBottomColor: theme.colors.shape_dark,
-          paddingBottom: 10,
-          marginBottom: 10
-        }}
+            headerStyle={{
+              backgroundColor: theme.colors.shape,
+              borderBottomWidth: 0.5,
+              borderBottomColor: theme.colors.shape_dark,
+              paddingBottom: 10,
+              marginBottom: 10
+            }}
 
-        theme={{
-          textDayFontFamily: theme.fonts.regular,
-          textDayFontSize: 18,
-          textDayHeaderFontFamily: theme.fonts.medium,
-          textDayHeaderFontSize: 15,
-          textSecondaryColor: theme.colors.shape_dark,
-          textMonthFontFamily: theme.fonts.bold,
-          textMonthFontSize: 20,
-          monthTextColor: theme.colors.shape_dark,
-          arrowStyle: {
-            marginHorizontal: -15
-            
-          }
-        }}
-        
+            theme={{
+              textDayFontFamily: theme.fonts.regular,
+              textDayHeaderFontFamily: theme.fonts.bold,
+              textDayFontSize: 15,
+              textDayHeaderFontSize: 12,
+              textMonthFontSize: 20,
+              textSecondaryColor: theme.colors.shape,
+              monthTextColor: theme.colors.shape_dark,
+              arrowStyle: {
+                marginHorizontal: -15
+              }
+            }}
+
+            firstDay={1}
+            markingType="period"
+            onDayPress={day => {
+              console.log('selected day', day);
+            }}
+        />
+
+            <ButtonCloseModal
+              onPress={onPress}
+            >
+                <ButtonCloseModalText>Selecionar</ButtonCloseModalText>
+            </ButtonCloseModal>
 
 
-
-    />
+  </Container>
   );
 }

@@ -1,8 +1,9 @@
 import React from 'react';
-import { FlatList, ScrollView } from 'react-native';
 import { useTheme } from 'styled-components';
 import { CategoryCard } from '../../components/CategoryCard';
 import { HighlightCardCategory } from '../../components/HighlightCardCategory';
+import { category } from '../../utils/category';
+import { services } from '../../utils/services';
 
 import {
   Container,
@@ -22,59 +23,7 @@ import {
 export function Search(){
     const theme = useTheme();
 
-    const category = [
-        {
-          id: '12346',
-          photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
-          title: 'Pés e Mãos',
-          services: 20
-        },
-        {
-          id: '12347',
-          photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
-          title: 'Mãos',
-          services: 10
-        },
-        {
-          id: '12348',
-          photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
-          title: 'Pés',
-          services: 50
-        },
-        {
-          id: '12310',
-          photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
-          title: 'Pintar Unhas',
-          services: 40
-        },
-      ]
-
-    const services = [
-        {
-          id: '12346',
-          photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
-          title: 'Pés e Mãos',
-          price: 20
-        },
-        {
-          id: '12347',
-          photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
-          title: 'Mãos',
-          price: 12
-        },
-        {
-          id: '12348',
-          photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
-          title: 'Pés',
-          price: 15
-        },
-        {
-          id: '12310',
-          photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
-          title: 'Pintar Unhas',
-          price: 26
-        },
-      ]
+    
   return (
     <Container>
         <Header>
@@ -91,7 +40,10 @@ export function Search(){
             <ScrollCategory>
                 { 
                     category.map(item => (
-                    <HighlightCardCategory key={item.id} data={item} />
+                      <HighlightCardCategory 
+                        key={item.id} 
+                        data={item} 
+                      />
                     ))
                 }
             </ScrollCategory>
@@ -103,7 +55,10 @@ export function Search(){
         <ScrollServices>
               { 
                 services.map(item => (
-                  <CategoryCard key={item.id} data={item}/>
+                  <CategoryCard 
+                    key={item.id} 
+                    data={item}
+                  />
                 ))
               }
         </ScrollServices>

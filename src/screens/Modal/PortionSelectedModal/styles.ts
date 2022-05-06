@@ -23,7 +23,7 @@ export const Title = styled.Text`
 `;
 
 
-export const Field = styled.View`
+export const Field = styled.TouchableOpacity`
     width: 100%;
     flex-direction: row;
     

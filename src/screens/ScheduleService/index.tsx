@@ -1,6 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { Modal } from 'react-native';
+import { Calendar } from '../../components/Calendar';
 import { Button } from '../../components/Form/Button';
 import { ButtonBack } from '../../components/Form/ButtonBack';
 import { ButtonTime } from '../../components/Form/ButtonTime';
@@ -13,7 +14,7 @@ import {
   Header,
   ServiceTitle,
   ServicePeriod,
-  DateInfo,
+  DateInfoButton,
   DateTitle,
   DateValue,
   DatePast,
@@ -28,12 +29,22 @@ import {
   TimeAfternoon,
   TimeEvening,
   Footer,
-  ModalField
+  ModalField,
+  FieldCalendar
 } from './styles';
 
 export function ScheduleService(){
   const navigation = useNavigation();
   const [modalVisible, setModalVisible] = useState(false);
+  const [selectedCalendar, setSelectedCalendar] = useState(false);
+  
+  function handleSelectedOpenCalendar() {
+    setSelectedCalendar(true);
+  }
+
+  function handleSelectedCloseCalendar() {
+    setSelectedCalendar(false);
+  }
 
   function handleCloseSelectModal() {
     setModalVisible(false);
@@ -62,12 +73,28 @@ export function ScheduleService(){
         
 
         <ServicePeriod>
+          <Modal
+            visible={selectedCalendar}
+            animationType='fade'
+            transparent={true}
+            style={{marginTop: '50%'}}
+          >
+            <FieldCalendar>
+                <Calendar 
+                  onPress={handleSelectedCloseCalendar}
+                />
+
+            </FieldCalendar>
+          </Modal>
+
           <DatePast>22    23    24</DatePast>
 
-              <DateInfo>
+              <DateInfoButton
+                onPress={handleSelectedOpenCalendar}
+              >
                 <DateValue>25</DateValue>
                 <DateTitle>Terça</DateTitle>
-              </DateInfo>
+              </DateInfoButton>
 
             <DateFuture>26    27    28</DateFuture>
           

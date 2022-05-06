@@ -43,7 +43,6 @@ import {
   PortionSelectedTitle,
   PortionSelectedIcon,
   FieldPortion,
-  ScrollCards
 } from './styles';
 
 export function Payment(){
@@ -166,7 +165,6 @@ export function Payment(){
 
             <FieldCards>
                 <Cards>             
-                    <ScrollCards>
                       {
                         cards.map(item => (
                           <Card
@@ -178,9 +176,7 @@ export function Payment(){
                           />
                         ))
                       }
-                    </ScrollCards>     
                 </Cards>
-     
             </FieldCards>   
 
             <Modal

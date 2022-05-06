@@ -31,7 +31,16 @@ export const ServicePeriod = styled.View`
     margin-top: 30px;
 `;
 
-export const DateInfo = styled.View`
+export const FieldCalendar = styled.View`
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.5);
+`;
+
+export const DateInfoButton = styled.TouchableOpacity`
     width: 104px;
     height: 40px;
     flex-direction: row;
@@ -58,7 +67,7 @@ export const DateTitle = styled.Text`
     font-family: ${({ theme }) => theme.fonts.regular};
     font-size: ${RFValue(15)}px;
     color: ${({ theme }) => theme.colors.shape};
-    padding-right: 15px;
+    padding-right: 12px;
 
 `;
 

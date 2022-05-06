@@ -155,46 +155,7 @@ export const TitleAddButton = styled.Text`
     padding-bottom: 10px;
 `;
 
-export const FieldCards = styled.ScrollView`
-    padding: 0px 24px;
-    height: 200px;
-`;
 
-export const Cards = styled.View`
-    height: 400px;
-`;
-
-export const Footer = styled.View`
-    width: 100%;
-    background-color: ${({ theme }) => theme.colors.shape};
-    
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-
-    padding-top: 30px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-`;
-
-export const FieldPrice = styled.View``;
-
-export const PriceButton = styled.Text`
-    font-family: ${({ theme }) => theme.fonts.regular};
-    font-size: 21px;
-    color: ${({ theme }) => theme.colors.coral};
-`;
-export const TitlePrice = styled.Text`
-    font-family: ${({ theme }) => theme.fonts.regular};
-    font-size: 14px;
-    color: ${({ theme }) => theme.colors.text_100};
-`;
-
-export const FieldButtonPrice = styled.View``;
 
 export const FieldPortion = styled.View`
     padding: 0 38px;
@@ -232,12 +193,46 @@ export const ModalField = styled.View`
 `;
 
 
-export const ScrollCards = styled.ScrollView.attrs({
-    showsVerticalScrollIndicator: false,
-    contentContainerStyle: {
-        marginBottom: 20,
-    }
-})`
-
+export const FieldCards = styled.View`
+    flex: 1;
+    padding: 0px 24px;
 `;
+
+export const Cards = styled.View`
+    
+`;
+
+export const Footer = styled.View`
+    width: 100%;
+    background-color: ${({ theme }) => theme.colors.shape};
+    
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+
+    margin-top: 0px;
+`;
+
+export const FieldPrice = styled.View``;
+
+export const PriceButton = styled.Text`
+    font-family: ${({ theme }) => theme.fonts.regular};
+    font-size: 21px;
+    color: ${({ theme }) => theme.colors.coral};
+`;
+export const TitlePrice = styled.Text`
+    font-family: ${({ theme }) => theme.fonts.regular};
+    font-size: 14px;
+    color: ${({ theme }) => theme.colors.text_100};
+`;
+
+export const FieldButtonPrice = styled.View``;
 
