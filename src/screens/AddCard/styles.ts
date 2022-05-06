@@ -37,7 +37,7 @@ export const Footer = styled.View`
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
 
-    margin-top: 80px;
+    margin-top: 100px;
 `;
 
 

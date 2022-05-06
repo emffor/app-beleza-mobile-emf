@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ButtonLogout } from '../../components/Form/ButtonLogout';
 
 import auth from '@react-native-firebase/auth';
+import firestore from '@react-native-firebase/firestore';
 
 import {
   Container,
@@ -29,34 +30,34 @@ import SaleOffSvg from '../../assets/HighlightCard/saleoff.svg';
 import { CategoryCard } from '../../components/CategoryCard';
 import { FlatList } from 'react-native';
 
+export type DescriptionProps = {
+  id: string;
+  photo: string;
+  title: string;
+  price: number;
+}
+
 
 export function Home(){
-  const category = [
-    {
-      id: '12346',
-      photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
-      title: 'Pés e Mãos',
-      price: 20
-    },
-    {
-      id: '12347',
-      photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
-      title: 'Mãos',
-      price: 12
-    },
-    {
-      id: '12348',
-      photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
-      title: 'Pés',
-      price: 15
-    },
-    {
-      id: '12310',
-      photo: 'https://novacosmeticos.com/uploads/images/2018/09/maos-e-pes-1538050842.png',
-      title: 'Pintar Unhas',
-      price: 26
-    },
-  ]
+  
+const [ products, setProducts ] = useState<DescriptionProps[]>([]);
+
+  useEffect(() => {
+    firestore()
+    .collection('products')
+    .get()
+    .then(async response => {
+        const data = await response.docs.map(doc => {
+          return {
+            id: doc.id,
+            ...doc.data()
+          }
+        }) as DescriptionProps[];
+        setProducts(data);
+    })
+    .catch(error => console.error(error));
+  },[]);  
+
 
   function handleLogout(){
     auth().signOut();
@@ -125,7 +126,7 @@ export function Home(){
         <FieldCategory>
           <TitleCategory>Unhas</TitleCategory>
             <FlatList 
-                data={category}
+                data={products}
                 style={{flex: 1, width: '100%', marginTop: 36, marginBottom: 36}}     
                 horizontal={true}
                 keyExtractor={(item) => item.id}
@@ -141,7 +142,7 @@ export function Home(){
         <FieldCategory>
           <TitleCategory>Cabelo</TitleCategory>
             <FlatList 
-                data={category}
+                data={products}
                 style={{flex: 1, width: '100%',marginTop: 36, marginBottom: 36}}
                 horizontal={true}
                 keyExtractor={(item) => item.id}
@@ -157,7 +158,7 @@ export function Home(){
         <FieldCategory>
           <TitleCategory>Depilação</TitleCategory>
             <FlatList 
-                data={category}
+                data={products}
                 style={{flex: 1, width: '100%',marginTop: 36, marginBottom: 36}}
                 horizontal={true}
                 keyExtractor={(item) => item.id}
@@ -173,7 +174,7 @@ export function Home(){
         <FieldCategory>
           <TitleCategory>Massagem</TitleCategory>
             <FlatList 
-                data={category}
+                data={products}
                 style={{flex: 1, width: '100%',marginTop: 36, marginBottom: 36}}
                 horizontal={true}
                 keyExtractor={(item) => item.id}

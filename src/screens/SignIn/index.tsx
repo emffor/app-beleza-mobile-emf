@@ -18,7 +18,10 @@ import {
   Title,
   TitleRegister,
   TitleRegisterButton,
-  FormFooter
+  FormFooter,
+  FieldButtonAnonymous,
+  ButtonAnonymous,
+  IconAnonymous
 } from './styles';
 import { Alert } from 'react-native';
 import { InputPassword } from '../../components/Form/InputPassword';
@@ -38,7 +41,7 @@ export function SignIn(){
 
   async function handleSignInAnonymous() {
     const { user } = await auth().signInAnonymously();
-    console.log(user);
+    Alert.alert('Usuário anônimo criado com sucesso!');
   }
 
    function handleSignInWithEmailAndPassword(){
@@ -73,6 +76,14 @@ export function SignIn(){
                   onPress={handleGoBAck}
               /> 
 
+              <FieldButtonAnonymous>
+                <ButtonAnonymous
+                  onPress={handleSignInAnonymous}
+                >
+                    <IconAnonymous name="user" />
+                </ButtonAnonymous>
+              </FieldButtonAnonymous>
+
            <Fields>        
                 <Input 
                     placeholder="Email"
@@ -88,7 +99,7 @@ export function SignIn(){
                 <FieldCheck>
                   <Button 
                     title="Entrar"
-                    onPress={handleSignInAnonymous}
+                    onPress={handleSignInWithEmailAndPassword}
                   />
 
                   <ButtonForgot

@@ -21,20 +21,22 @@ const { Navigator, Screen } = createBottomTabNavigator();
 export function AppTabRoutes() {
   return (
     <Navigator
+    
       screenOptions={{
         tabBarActiveTintColor: theme.colors.coral,
         tabBarInactiveTintColor: theme.colors.blue_sky,
         tabBarLabelPosition: 'beside-icon',
         headerShown: false,
-        tabBarShowLabel: false,
+        tabBarShowLabel: false, 
         tabBarStyle: {
           height: 80,
-          paddingVertical: Platform.OS === 'ios' ? 20 : 0,
+          paddingVertical: Platform.OS === 'ios' ? 20 : 0,        
         },
         tabBarLabelStyle: {
           fontFamily: theme.fonts.regular
-        }
+        }    
       }}
+      
     >
       <Screen
         name="Home"
