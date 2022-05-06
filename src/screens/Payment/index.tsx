@@ -42,7 +42,8 @@ import {
   PortionSelected,
   PortionSelectedTitle,
   PortionSelectedIcon,
-  FieldPortion
+  FieldPortion,
+  ScrollCards
 } from './styles';
 
 export function Payment(){
@@ -154,7 +155,7 @@ export function Payment(){
 
             <FieldCards>
                 <Cards>             
-                    <ScrollView>
+                    <ScrollCards>
                       {
                         cards.map(item => (
                           <Card
@@ -166,7 +167,7 @@ export function Payment(){
                           />
                         ))
                       }
-                    </ScrollView>     
+                    </ScrollCards>     
                 </Cards>
      
             </FieldCards>   
