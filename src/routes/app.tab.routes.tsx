@@ -1,9 +1,6 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Feather } from '@expo/vector-icons';
-import { AntDesign } from '@expo/vector-icons';
 import theme from '../theme';
 import { OrderStatus } from '../screens/OrderStatus';
 import { Search } from '../screens/Search';

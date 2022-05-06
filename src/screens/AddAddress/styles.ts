@@ -1,4 +1,3 @@
-import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
 import { AntDesign } from '@expo/vector-icons';
 
@@ -23,9 +22,7 @@ export const ButtonCep = styled.TouchableOpacity`
 
     border-bottom-width: 1px;
     text-align: center;
-    
-    
-    
+ 
 `;
 export const ButtonText = styled.Text``;
 export const FieldInputs = styled.View``;

@@ -3,9 +3,7 @@ import styled from 'styled-components/native';
 
 export const Container = styled.ScrollView``;
 
-export const Form = styled.View`
-    
-`;
+export const Form = styled.View``;
 
 export const Content = styled.View`
     margin-top: 60px;

@@ -5,8 +5,6 @@ export const Container = styled.View`
     
 `;
 
-
-
 export const ButtonCloseModal = styled.TouchableOpacity`
     justify-content: center;
     align-items: center; 

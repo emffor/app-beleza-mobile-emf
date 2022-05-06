@@ -74,8 +74,6 @@ export function Calendar({ onPress } : Props){
             >
                 <ButtonCloseModalText>Selecionar</ButtonCloseModalText>
             </ButtonCloseModal>
-
-
   </Container>
   );
 }
