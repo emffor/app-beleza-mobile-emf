@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
-import { Modal } from 'react-native';
+import { Alert, Modal } from 'react-native';
 import { Button } from '../../components/Form/Button';
 import { ButtonBack } from '../../components/Form/ButtonBack';
 import { Input } from '../../components/Form/Input';
@@ -54,6 +54,7 @@ export function AddAddress(){
 
     function handleAddAddress(){
         navigation.navigate('Payment');
+        Alert.alert('Cartão e Endereço adicionado com sucesso!');
     }
 
   return (

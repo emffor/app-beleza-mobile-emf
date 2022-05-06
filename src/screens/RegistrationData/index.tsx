@@ -22,7 +22,6 @@ import {
 
 export function RegistrationData(){
   const navigation = useNavigation();
-  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isActive, setIsActive] = useState(false);
@@ -54,12 +53,9 @@ export function RegistrationData(){
        }
      })
    }
-
-   console.log(name, email, password);
    
   return (
     <Container>
-
       <Content>
          <Form>
               <FieldBack>
@@ -71,8 +67,6 @@ export function RegistrationData(){
            <Fields>
                 <Input 
                     placeholder="Nome Completo"
-                    onChangeText={setName}
-
                 />
                 
                 <Input 
@@ -82,12 +76,10 @@ export function RegistrationData(){
 
                 <Input 
                     placeholder="CPF"
-                    onChangeText={setEmail}
                 />
 
                 <Input 
                     placeholder="Telefone"
-                    onChangeText={setEmail}
                 />
 
                 <Input 
