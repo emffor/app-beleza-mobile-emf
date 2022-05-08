@@ -3,6 +3,11 @@
     "name": "app-beleza-mobile-emf",
     "slug": "app-beleza-mobile-emf",
     "version": "1.0.0",
+    "splash": {
+      "image": "/assets/splash.png",
+      "backgroundColor": "#ffffff",
+      "resizeMode": "contain"
+    },
     "assetBundlePatterns": [
       "**/*"
     ]
